@@ -1,15 +1,21 @@
 {
   "plugins": [
-    "react"
+    "react",
+    "prettier"
   ],
   "parser": "babel-eslint",
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "prettier"
   ],
   "rules": {
     "no-set-state": "off",
-    "strict": 0
+    "strict": 0,
+    "jsx-quotes": [
+      1,
+      "prefer-double"
+    ]
   },
   "parserOptions": {
     "ecmaVersion": 6,

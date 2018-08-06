@@ -36,6 +36,5 @@ export const createTable = (dataMatrix, rowCount, columnCount) => {
 
 
 export const deleteRow = (dataMatrix) => {
-  console.log('deleteRow=');
   dataMatrix.rows.splice(-1);
 };

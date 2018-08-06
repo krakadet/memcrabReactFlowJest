@@ -6,5 +6,5 @@
   "trailingComma": "es5", // запятая в последней строке - да
   "jsxBracketSameLine": false, // закрывающийся jsx в этой же строке
   "parser": "flow", // парсер - flow (пока не важно)
-  "semi": false // точка с запятой - нет
+  "semi": true // точка с запятой - нет
 }

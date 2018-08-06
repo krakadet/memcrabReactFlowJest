@@ -29,7 +29,7 @@ class InputValuesComponent extends Component {
       });
     };
 
-    handlerClickBtn = (event) => {
+    handlerClickBtn = () => {
       this.props.createTableButtonClick(this.state.valueRow, this.state.valueColumn, this.state.lightValue);
     };
 

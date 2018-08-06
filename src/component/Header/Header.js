@@ -1,12 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default ({ className }) => (
+function Header(className) {
   <div className={className}>
     <header className="App-header">
       <h1 className="App-title">
-Welcome
+        Welcome
       </h1>
     </header>
-  </div>
+  </div>;
 
-);
+
+  Header.propTypes = {
+    className: PropTypes.string,
+  };
+};
+
+export default Header;
+
