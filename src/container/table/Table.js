@@ -35,9 +35,18 @@ class Table extends PureComponent {
 
     render() {
       const {
-        dataMatrix
+        dataMatrix,
+        updateData,
+        addCellPlusOne,
+        addRowToPage,
+        lightValue,
       } = this.props;
-
+      const {
+        lightArrValue,
+        percentDisplayValue,
+        percentDisplayRow,
+        highlightedCells,
+      } = this.state;
       return (
         <table>
           <tbody id="matrixTable">
@@ -45,13 +54,20 @@ class Table extends PureComponent {
               <RowComponent
                 key={arr.id}
                 arr={arr}
+                dataMatrix={dataMatrix}
                 id={arr.id}
+                highlightedCells={highlightedCells}
+                updateData={updateData}
+                addCellPlusOne={addCellPlusOne}
+                addRow={addRowToPage}
                 indexParentRow={index}
                 cellsDataValue={arr.cells}
+                lightValue={lightValue}
                 updateDataLightArrValue={this.updateDataLightArrValue}
+                lightArrValue={lightArrValue}
                 percentDisplay={this.percentDisplay}
-                {...this.props}
-                {...this.state}
+                percentDisplayValue={percentDisplayValue}
+                percentDisplayRow={percentDisplayRow}
               />
             ))}
             <AvgRow
