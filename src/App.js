@@ -4,6 +4,8 @@ import Table from './container/table/Table';
 import InputValuesComponent from './component/InputValueComponent/InputValuesComponent';
 import './App.css';
 import { addRow, createTable, deleteRow } from './helpers/addrow';
+import store from './store/store';
+import Provider from 'react-redux/es/components/Provider';
 
 class App extends Component {
     state = {
@@ -68,6 +70,7 @@ class App extends Component {
 
     render() {
       return (
+        <Provider store={store}>
         <div>
           <Header
             className="header"
@@ -85,6 +88,7 @@ class App extends Component {
             addCellPlusOne={this.addCellPlusOne}
           />
         </div>
+        </Provider>
       );
     }
 }
