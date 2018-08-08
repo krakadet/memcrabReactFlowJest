@@ -1,13 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { avgColumnMatrix } from '../../helpers/avgColumnMatrix';
-
 
 function AvgRow(props) {
-  const { dataMatrix } = props;
-
-  const avgArr = avgColumnMatrix(dataMatrix);
+  const {avgArr} = props;
   return (
     <tr>
       {avgArr.map((value, index) => (
@@ -20,7 +16,7 @@ function AvgRow(props) {
 }
 
 AvgRow.propTypes = {
-  dataMatrix: PropTypes.object.isRequired,
+  avgArr: PropTypes.array.isRequired,
 };
 
 export default AvgRow;

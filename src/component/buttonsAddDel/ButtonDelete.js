@@ -1,23 +1,39 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { deleteRowTable } from '../../action';
 
-function RowDelete(props) {
-  const handlerClick = (ev) => {
+class ButtonDelete extends PureComponent {
+
+  handlerClick = (ev) => {
     ev.preventDefault();
-    props.updateData();
+    const { deleteRowTable, dataMatrix } = this.props;
+    deleteRowTable(dataMatrix);
   };
-  return (
-    <td>
-      <button type="button" id="theButton" onClick={handlerClick}>
-        {' '}
-Delete
-        {' '}
-      </button>
-    </td>
-  );
-}
-RowDelete.propTypes = {
-  updateData: PropTypes.func,
+
+  render() {
+
+    return (
+      <td>
+        <button type="button" id="theButton" onClick={this.handlerClick}>
+          {' '}
+          Delete
+          {' '}
+        </button>
+      </td>
+    );
+
+  }
 };
 
-export default RowDelete;
+ButtonDelete.propTypes = {
+  dataMatrix: PropTypes.object,
+  deleteRowTable: PropTypes.func,
+};
+
+export default connect((state => {
+  return {
+    dataMatrix: state.state.dataMatrix,
+  };
+}), { deleteRowTable })(ButtonDelete);
+

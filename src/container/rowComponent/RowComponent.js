@@ -1,24 +1,23 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import RowDelete from '../../component/buttonsAddDel/ButtonDelete';
-import RowAdd from '../../component/buttonsAddDel/ButtonAdd';
+import ButtonDelete from '../../component/buttonsAddDel/ButtonDelete';
+import ButtonAdd from '../../component/buttonsAddDel/ButtonAdd';
 import Cell from '../../component/cellComponent/Cell';
-import CellSumRow from '../../component/allSumTable/CellSumRow';
+import CellSumRow from '../../component/lastCellSumRow/CellSumRow';
 import { sumRow } from '../../helpers/sumAllRow';
 import { percentValue } from '../../helpers/percentCalc';
+import { connect } from 'react-redux';
 
 class RowComponent extends PureComponent {
   render() {
     const {
       cellsDataValue,
       indexParentRow,
-      updateData,
       dataMatrix,
       id,
+      updateDataLightArrValue,
       highlightedCells,
       percentDisplayRow,
-      addCellPlusOne,
-      updateDataLightArrValue,
       percentDisplay,
     } = this.props;
     return (
@@ -27,66 +26,56 @@ class RowComponent extends PureComponent {
           <Cell
             key={dataMatrix.cells[val].id}
             highlighted={highlightedCells.includes(val)}
+            updateDataLightArrValue={updateDataLightArrValue}
             value={percentValue(dataMatrix.cells[val].value, sumRow(indexParentRow, dataMatrix))}
             id={dataMatrix.cells[val].id}
-            addCellPlusOne={addCellPlusOne}
-            updateDataLightArrValue={updateDataLightArrValue}
             isStyle
           />
         )) : cellsDataValue.map(val => (
           <Cell
             key={dataMatrix.cells[val].id}
             highlighted={highlightedCells.includes(val)}
+            updateDataLightArrValue={updateDataLightArrValue}
             value={dataMatrix.cells[val].value}
             id={dataMatrix.cells[val].id}
-            addCellPlusOne={addCellPlusOne}
-            updateDataLightArrValue={updateDataLightArrValue}
           />
         ))
-                }
+        }
 
         {
           <CellSumRow
+            key = {id}
             indexParentRow={indexParentRow}
             percentDisplay={percentDisplay}
             sumAllCellRow={sumRow(indexParentRow, dataMatrix)}
           />
-                }
+        }
         {
-          <RowAdd updateData={updateData} />
-                }
+          <ButtonAdd/>
+        }
         {
-          <RowDelete updateData={updateData} />
-                }
+          <ButtonDelete/>
+        }
       </tr>
     );
   }
 }
-RowComponent.defaultProps = {
-  indexParentRow: 0,
-  percentDisplayRow: '',
-  id: '',
-  cellsDataValue: [],
-  highlightedCells: [],
-  percentDisplay: 0,
-  dataMatrix: {
-    rows: [],
-    cells: {},
-  },
 
-};
 
 RowComponent.propTypes = {
   dataMatrix: PropTypes.object,
   updateData: PropTypes.func,
-  addCellPlusOne: PropTypes.func,
   indexParentRow: PropTypes.number,
-  updateDataLightArrValue: PropTypes.func,
   percentDisplayRow: PropTypes.string,
   id: PropTypes.string,
+  updateDataLightArrValue: PropTypes.array,
   cellsDataValue: PropTypes.array,
   highlightedCells: PropTypes.array,
   percentDisplay: PropTypes.number,
 };
 
-export default RowComponent;
+export default connect(state => {
+  return {
+    dataMatrix: state.state.dataMatrix,
+  };
+})(RowComponent);

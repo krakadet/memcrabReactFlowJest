@@ -1,24 +1,41 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { addRowToTable } from '../../action';
 
-function RowAdd(props) {
-  const handlerClick = (ev) => {
+class ButtonAdd extends PureComponent {
+
+  handlerClick = (ev) => {
     ev.preventDefault();
-    props.updateData('add');
+    const { addRowToTable, dataMatrix, valueColumn } = this.props;
+    addRowToTable(dataMatrix, valueColumn);
   };
 
-  return (
-    <td>
-      <button type="button" id="theButton" onClick={handlerClick}>
-        {' '}
-            Add
-        {' '}
-      </button>
-    </td>
-  );
-}
-RowAdd.propTypes = {
-  updateData: PropTypes.func,
+  render() {
+
+    return (
+      <td>
+        <button type="button" id="theButton" onClick={this.handlerClick}>
+          {' '}
+          Add
+          {' '}
+        </button>
+      </td>
+    );
+
+  }
+};
+ButtonAdd.propTypes = {
+  addRowToTable: PropTypes.func,
+  dataMatrix: PropTypes.object,
+  valueColumn: PropTypes.number,
+
 };
 
-export default RowAdd;
+export default connect((state => {
+  return {
+    dataMatrix: state.state.dataMatrix,
+    valueColumn: state.state.valueColumn,
+  };
+}), { addRowToTable })(ButtonAdd);
+

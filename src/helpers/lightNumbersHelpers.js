@@ -33,21 +33,6 @@ export const newLightingCell = (idCell, cellsCount, dataMatrix) => {
   }
   return lightArr;
 };
-
-export const findRowsWitchLight = (lightArr, dataMatrix) => {
-  const rowArr = [];
-  for (let i = 0; i < lightArr.length; i += 1) {
-    for (let j = 0; j < dataMatrix.rows.length; j += 1) {
-      for (let k = 0; k < dataMatrix.rows[j].cells.length; k += 1) {
-        if (lightArr[i] === dataMatrix.rows[j].cells[k]) {
-          rowArr.push(dataMatrix.rows[j].id);
-        }
-      }
-    }
-  }
-  return rowArr;
-};
-
 export const getIdCell = event => event.currentTarget.id;
 
 export const getIdRow = event => event.currentTarget.parentNode.id;

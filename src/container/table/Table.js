@@ -1,52 +1,46 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import RowComponent from '../rowComponent/RowComponent';
 import AvgRow from '../../component/avgRow/avgRow';
-import { newLightingCell } from '../../helpers/lightNumbersHelpers';
+import connect from 'react-redux/es/connect/connect';
+import {newLightingCell} from '../../helpers/lightNumbersHelpers';
+import { avgColumnMatrix } from '../../helpers/avgColumnMatrix';
 
+class Table extends Component {
+  state = {
+    percentDisplayRow: null,
+    highlightedCells: [],
+  };
 
-class Table extends PureComponent {
-    state = {
-      lightArrValue: [],
-      percentDisplayRow: null,
-      highlightedCells: [],
-    };
+  updateDataLightArrValue = (idCell) => {
+    const { lightValue, dataMatrix } = this.props;
+    const highlightedArr = newLightingCell(idCell, lightValue, dataMatrix);
+    this.setState({
+      highlightedCells: highlightedArr,
+    });
+  };
 
-    updateDataLightArrValue = (idCell) => {
-      const { lightValue, dataMatrix } = this.props;
-      const highlightedArr = newLightingCell(idCell, lightValue, dataMatrix);
-
+  percentDisplay = (row) => {
+    if (row) {
       this.setState({
-        highlightedCells: highlightedArr,
+        percentDisplayRow: row,
       });
-    };
+    } else {
+      this.setState({
+        percentDisplayRow: row,
+      });
+    }
+  };
 
-    percentDisplay = (row) => {
-      if (row) {
-        this.setState({
-          percentDisplayRow: row,
-        });
-      } else {
-        this.setState({
-          percentDisplayRow: row,
-        });
-      }
-    };
 
-    render() {
+  render() {
+    const {
+      percentDisplayRow,
+      highlightedCells,
+    } = this.state;
       const {
         dataMatrix,
-        updateData,
-        addCellPlusOne,
-        addRowToPage,
-        lightValue,
       } = this.props;
-      const {
-        lightArrValue,
-        percentDisplayValue,
-        percentDisplayRow,
-        highlightedCells,
-      } = this.state;
       return (
         <table>
           <tbody id="matrixTable">
@@ -54,24 +48,17 @@ class Table extends PureComponent {
               <RowComponent
                 key={arr.id}
                 arr={arr}
-                dataMatrix={dataMatrix}
                 id={arr.id}
-                highlightedCells={highlightedCells}
-                updateData={updateData}
-                addCellPlusOne={addCellPlusOne}
-                addRow={addRowToPage}
                 indexParentRow={index}
                 cellsDataValue={arr.cells}
-                lightValue={lightValue}
                 updateDataLightArrValue={this.updateDataLightArrValue}
-                lightArrValue={lightArrValue}
-                percentDisplay={this.percentDisplay}
-                percentDisplayValue={percentDisplayValue}
                 percentDisplayRow={percentDisplayRow}
+                highlightedCells={highlightedCells}
+                percentDisplay={this.percentDisplay}
               />
             ))}
             <AvgRow
-              dataMatrix={dataMatrix}
+              avgArr={avgColumnMatrix(this.props.dataMatrix)}
             />
           </tbody>
         </table>
@@ -80,22 +67,16 @@ class Table extends PureComponent {
 }
 
 
-Table.defaultProps = {
-  dataMatrix: {
-    rows: [],
-    cells: {},
-  },
-  lightValue: 0,
-};
+
 
 Table.propTypes = {
   dataMatrix: PropTypes.object,
-  updateData: PropTypes.func,
-  addCellPlusOne: PropTypes.func,
-  addRowToPage: PropTypes.func,
   lightValue: PropTypes.number,
-
-
 };
 
-export default Table;
+export default connect ((state => {
+  return {
+    dataMatrix: state.state.dataMatrix,
+    lightValue: state.state.lightValue
+  }
+})) (Table);

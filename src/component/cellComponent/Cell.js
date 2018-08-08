@@ -2,12 +2,15 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import './cell.css';
 import { getIdCell } from '../../helpers/lightNumbersHelpers';
+import connect from 'react-redux/es/connect/connect';
+import {  addCellPlusOne } from '../../action';
 
 class Cell extends PureComponent {
 
   handleClick = (event) => {
     event.preventDefault();
-    this.props.addCellPlusOne(getIdCell(event));
+    const { addCellPlusOne, dataMatrix } = this.props;
+    addCellPlusOne(getIdCell(event), dataMatrix);
   };
 
   lightingNumberNative = (event) => {
@@ -36,6 +39,7 @@ class Cell extends PureComponent {
     }
   };
 
+
   render() {
     const {
       id,
@@ -62,11 +66,17 @@ Cell.propTypes = {
   addCellPlusOne: PropTypes.func,
   lightValue: PropTypes.number,
   lightArrValue: PropTypes.array,
-  updateDataLightArrValue: PropTypes.func,
   value: PropTypes.number,
   isStyle: PropTypes.bool,
-  highlighted: PropTypes.string,
+  highlighted: PropTypes.bool,
+  dataMatrix: PropTypes.object,
+  updateDataLightArrValue: PropTypes.func,
 
 };
 
-export default Cell;
+export default connect((state => {
+  return {
+    dataMatrix: state.state.dataMatrix,
+    lightValue: state.state.lightValue,
+  };
+}), {  addCellPlusOne })(Cell);
