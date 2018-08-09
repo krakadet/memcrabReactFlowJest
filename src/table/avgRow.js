@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 function AvgRow(props) {
-  const {avgArr} = props;
+  const { avgArr } = props;
   return (
     <tr>
       {avgArr.map((value, index) => (

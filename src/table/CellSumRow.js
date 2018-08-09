@@ -1,7 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { getIdRow } from '../../helpers/lightNumbersHelpers';
+
+const getIdRow = event => event.currentTarget.parentNode.id;
 
 function CellSumRow(props) {
   const handleMouseEnter = (event) => {
@@ -9,6 +10,7 @@ function CellSumRow(props) {
     const row = getIdRow(event);
     props.percentDisplay(row);
   };
+
 
   const handleMouseLeave = (event) => {
     event.preventDefault();
@@ -32,7 +34,7 @@ function CellSumRow(props) {
 
 CellSumRow.propTypes = {
   indexParentRow: PropTypes.number,
-  percentDisplay: PropTypes.number,
+  percentDisplay: PropTypes.func,
   sumAllCellRow: PropTypes.number,
 };
 

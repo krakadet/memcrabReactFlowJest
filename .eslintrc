@@ -3,19 +3,20 @@
     "react",
     "prettier"
   ],
+
   "parser": "babel-eslint",
+
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "prettier"
+    "prettier",
+     "airbnb"
   ],
+
   "rules": {
     "no-set-state": "off",
     "strict": 0,
-    "jsx-quotes": [
-      1,
-      "prefer-double"
-    ]
+    "jsx-quotes": 1
   },
   "parserOptions": {
     "ecmaVersion": 6,
