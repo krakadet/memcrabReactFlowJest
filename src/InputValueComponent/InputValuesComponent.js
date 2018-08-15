@@ -1,51 +1,39 @@
+// @flow
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import InputRow from './InputRow';
-import InputColumn from './InputColumn';
-import HighlightNeighboursNumber from './HighlightNeighboursNumber';
 import { createTableButtonClick } from '../action/action';
 
-class InputValuesComponent extends Component {
-    createTableButtonClick = this.props;
+type Props = {
+  createTableButtonClick: (valueRow: number, valueColumn: number, lightValue: number)=> void
+};
 
-    state = {
-      valueRow: 0,
-      valueColumn: 0,
-      lightValue: 0,
-    };
+type State = {
+  valueRow: number,
+  valueColumn: number,
+  lightValue: number,
+};
 
-    inputRowValue = (valueRow) => {
-      this.setState({
-        valueRow: +valueRow,
-      });
-    };
 
-    inputColumnValue = (valueColumn) => {
-      this.setState({
-        valueColumn: +valueColumn,
-      });
-    };
-
-    inputLightValue = (lightValue) => {
-      this.setState({
-        lightValue: +lightValue,
-      });
-    };
+class InputValuesComponent extends Component< Props, State> {
+  state = {
+    valueRow: 0,
+    valueColumn: 0,
+    lightValue: 0,
+  };
 
     handlerClickBtn = () => {
-
-        const {valueRow,valueColumn,lightValue} = this.state;
-           const {createTableButtonClick}  = this.props;
+      const { valueRow, valueColumn, lightValue } = this.state;
+      const {createTableButtonClick} = this.props;
       createTableButtonClick(valueRow, valueColumn, lightValue);
     };
 
     render() {
       return (
         <form>
-          <InputColumn inputColumnValue={this.inputColumnValue} />
-          <InputRow inputRowValue={this.inputRowValue} />
-          <HighlightNeighboursNumber inputLightValue={this.inputLightValue} />
+          <input type="number" placeholder="Input column" onChange={event => this.setState({ valueColumn: event.currentTarget.value })} />
+          <input type="number" placeholder="Input row" onChange={event => this.setState({ valueRow: event.currentTarget.value })} />
+          <input type="number" placeholder="Input highlight" onChange={event => this.setState({ lightValue: event.currentTarget.value })} />
           <button type="button" className="btn" onClick={this.handlerClickBtn}>
             {' '}
                     Create table

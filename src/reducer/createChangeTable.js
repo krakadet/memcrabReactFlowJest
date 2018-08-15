@@ -1,9 +1,11 @@
+// @flow
 import {
   ADD_PLUS_ONE_IN_CELL,
   ADD_ROW_TO_TABLE,
   CREATE_TABLE_BUTTON_CLICK,
   DELETE_ROW_TO_TABLE,
 } from '../constans';
+import type { Matrix } from '../MyTypes';
 
 const initialState = {
   valueRow: 0,
@@ -15,7 +17,19 @@ const initialState = {
   },
 };
 
-export default (state = initialState, action) => {
+type State = {
+  +valueRow: number,
+  +valueColumn: number,
+  +lightValue: number,
+  +dataMatrix: Matrix
+}
+
+type Action = {
+  +type: string,
+  +payload: any,
+};
+
+export default (state: State = initialState, action: Action) => {
   const { type, payload } = action;
   switch (type) {
     case CREATE_TABLE_BUTTON_CLICK:

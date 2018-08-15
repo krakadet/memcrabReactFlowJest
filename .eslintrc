@@ -1,7 +1,8 @@
 {
   "plugins": [
     "react",
-    "prettier"
+    "prettier",
+    "flowtype"
   ],
 
   "parser": "babel-eslint",
@@ -10,13 +11,19 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "prettier",
-     "airbnb"
+     "airbnb",
+    "plugin:flowtype/recommended"
   ],
 
   "rules": {
     "no-set-state": "off",
     "strict": 0,
-    "jsx-quotes": 1
+    "jsx-quotes": 1,
+    "flowtype/require-valid-file-annotation":[
+      2,
+      "always"
+    ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   },
   "parserOptions": {
     "ecmaVersion": 6,

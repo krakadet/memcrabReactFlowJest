@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import Table from './table/Table';
 import InputValuesComponent from './InputValueComponent/InputValuesComponent';

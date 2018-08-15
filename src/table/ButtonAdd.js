@@ -1,11 +1,17 @@
+// @flow
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addRowToTable } from '../action/action';
 
-class ButtonAdd extends PureComponent {
-    handlerClick = (ev) => {
-      ev.preventDefault();
+type Props = {
+  addRowToTable: (number) => void,
+  valueColumn: number,
+};
+
+class ButtonAdd extends PureComponent<Props> {
+    handlerClick = (event: Event & { currentTarget: HTMLButtonElement }) => {
+      event.preventDefault();
       const { addRowToTable, valueColumn } = this.props;
       addRowToTable(valueColumn);
     };
@@ -23,9 +29,8 @@ class ButtonAdd extends PureComponent {
     }
 }
 ButtonAdd.propTypes = {
-  addRowToTable: PropTypes.func,
-  dataMatrix: PropTypes.object,
-  valueColumn: PropTypes.number,
+  addRowToTable: PropTypes.func.isRequired,
+  valueColumn: PropTypes.number.isRequired,
 
 };
 

@@ -1,19 +1,32 @@
+// @flow
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import connect from 'react-redux/es/connect/connect';
 import RowComponent from './RowComponent';
 import AvgRow from './avgRow';
+import type { Matrix } from '../MyTypes';
 
-class Table extends Component {
+
+type State = {
+  percentDisplayRow: ?string,
+  highlightedCells: Array<string>
+}
+
+type Props= {
+  dataMatrix: Matrix,
+  lightValue: number
+}
+
+
+class Table extends Component<Props, State> {
     state = {
       percentDisplayRow: null,
       highlightedCells: [],
     };
 
-    newLightingCell = (idCell, cellsCount, dataMatrix) => {
-      const findMaxIndexInArr = (lightArr, objData, valueToCompare) => {
-        let maxDifference = 0,
-          lightArrIndex = 0;
+    newLightingCell = (idCell: string, cellsCount: number, dataMatrix: Matrix): Array<string> => {
+      const findMaxIndexInArr = (lightArr: Array<string>, objData: Matrix, valueToCompare): number => {
+        let maxDifference = 0;
+        let lightArrIndex = 0;
         for (let i = 0; i < lightArr.length; i += 1) {
           const currentDifference = Math.abs(objData.cells[lightArr[i]].value - valueToCompare);
           if (currentDifference > maxDifference) {
@@ -25,10 +38,10 @@ class Table extends Component {
       };
       const lightArr = [];
       if (idCell !== undefined) {
-        const currentValue = +dataMatrix.cells[idCell].value;
+        const currentValue: number = +dataMatrix.cells[idCell].value;
         for (const key in dataMatrix.cells) {
           if (key !== idCell) {
-            const currentDiff = Math.abs(currentValue - dataMatrix.cells[key].value);
+            const currentDiff: number = Math.abs(currentValue - dataMatrix.cells[key].value);
             if (lightArr.length < cellsCount) {
               lightArr[lightArr.length] = key;
             } else {
@@ -46,11 +59,11 @@ class Table extends Component {
     };
 
 
-    avgColumnMatrix = (dataMatrix) => {
-      const resultArr = [];
+    avgColumnMatrix = (dataMatrix): Array<string> => {
+      const resultArr: Array<string> = [];
       if (dataMatrix.rows.length !== 0) {
         for (let column = 0; column < dataMatrix.rows[0].cells.length; column += 1) {
-          let sums = 0;
+          let sums: number = 0;
           for (let i = 0; i < dataMatrix.rows.length; i += 1) {
             const cell = dataMatrix.rows[i].cells[column];
             sums += dataMatrix.cells[cell].value;
@@ -70,7 +83,7 @@ class Table extends Component {
       });
     };
 
-    percentDisplay = (row) => {
+    percentDisplay = (row: string) => {
       if (row) {
         this.setState({
           percentDisplayRow: row,
@@ -108,19 +121,15 @@ class Table extends Component {
               />
             ))}
             <AvgRow
-              avgArr={this.avgColumnMatrix(this.props.dataMatrix)}
+              key="cell"
+              avgArr={this.avgColumnMatrix(dataMatrix)}
+
             />
           </tbody>
         </table>
       );
     }
 }
-
-
-Table.propTypes = {
-  dataMatrix: PropTypes.object,
-  lightValue: PropTypes.number,
-};
 
 export default connect((state => ({
   dataMatrix: state.state.dataMatrix,

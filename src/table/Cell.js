@@ -1,30 +1,43 @@
-import React, { PureComponent } from 'react';
+// @flow
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import '../style/cell.css';
 import connect from 'react-redux/es/connect/connect';
 import { addCellPlusOne } from '../action/action';
+import type { Matrix } from '../MyTypes';
 
-class Cell extends PureComponent {
-    getIdCell = event => event.currentTarget.id;
+type Props = {
+  addCellPlusOne: Function,
+  lightValue: (string, Matrix) => void,
+  updateDataLightArrValue: (?string) => void,
+  dataMatrix: Matrix,
+  id: string,
+  value: number,
+  highlighted: string,
+  isStyle: boolean,
+};
 
-    handleClick = (event) => {
+
+class Cell extends React.PureComponent<Props> {
+    handleClick = (event: SyntheticEvent<HTMLButtonElement>) => {
       event.preventDefault();
       const { addCellPlusOne, dataMatrix } = this.props;
-      addCellPlusOne(this.getIdCell(event), dataMatrix);
+      addCellPlusOne(event.currentTarget.id, dataMatrix);
     };
 
-    lightingNumberNative = (event) => {
+    lightingNumberNative = (event: SyntheticEvent<HTMLTableCellElement>) => {
       event.preventDefault();
-      if (this.props.lightValue !== 0) {
-        this.props.updateDataLightArrValue();
+      const { lightValue, updateDataLightArrValue } = this.props;
+      if (lightValue !== 0) {
+        updateDataLightArrValue();
       }
     };
 
-    lightingNumbersCustom = (event) => {
+    lightingNumbersCustom = (event: SyntheticEvent<HTMLTableCellElement>) => {
       event.preventDefault();
-      if (this.props.lightValue !== 0) {
-        const idCell = this.getIdCell(event);
-        this.props.updateDataLightArrValue(idCell);
+      const { lightValue, updateDataLightArrValue } = this.props;
+      if (lightValue !== 0) {
+        updateDataLightArrValue(event.currentTarget.id);
       }
     };
 
@@ -62,14 +75,17 @@ class Cell extends PureComponent {
 }
 
 Cell.propTypes = {
-  id: PropTypes.string,
-  addCellPlusOne: PropTypes.func,
-  lightValue: PropTypes.number,
-  value: PropTypes.number,
+  id: PropTypes.string.isRequired,
+  addCellPlusOne: PropTypes.func.isRequired,
+  lightValue: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
   isStyle: PropTypes.bool,
-  highlighted: PropTypes.bool,
-  dataMatrix: PropTypes.object,
-  updateDataLightArrValue: PropTypes.func,
+  highlighted: PropTypes.bool.isRequired,
+  dataMatrix: PropTypes.shape({
+    rows: PropTypes.arrayOf(PropTypes.object),
+    cells: PropTypes.objectOf(PropTypes.object),
+  }).isRequired,
+  updateDataLightArrValue: PropTypes.func.isRequired,
 
 };
 

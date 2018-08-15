@@ -1,10 +1,17 @@
+// @flow
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 const getIdRow = event => event.currentTarget.parentNode.id;
 
-function CellSumRow(props) {
+type Props = {
+  indexParentRow: number,
+  percentDisplay: (?number) => void,
+  sumAllCellRow: number,
+}
+
+function CellSumRow(props: Props) {
   const handleMouseEnter = (event) => {
     event.preventDefault();
     const row = getIdRow(event);
@@ -33,9 +40,9 @@ function CellSumRow(props) {
 }
 
 CellSumRow.propTypes = {
-  indexParentRow: PropTypes.number,
-  percentDisplay: PropTypes.func,
-  sumAllCellRow: PropTypes.number,
+  indexParentRow: PropTypes.number.isRequired,
+  percentDisplay: PropTypes.func.isRequired,
+  sumAllCellRow: PropTypes.number.isRequired,
 };
 
 export default CellSumRow;

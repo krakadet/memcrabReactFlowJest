@@ -1,11 +1,17 @@
+// @flow
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { deleteRowTable } from '../action/action';
 
-class ButtonDelete extends PureComponent {
-  handlerClick = (ev) => {
-    ev.preventDefault();
+type Props = {
+  deleteRowTable: () => void,
+};
+
+
+class ButtonDelete extends PureComponent<Props> {
+  handlerClick = (event: Event & { currentTarget: HTMLButtonElement }) => {
+    event.preventDefault();
     const { deleteRowTable } = this.props;
     deleteRowTable();
   };
@@ -24,8 +30,7 @@ class ButtonDelete extends PureComponent {
 }
 
 ButtonDelete.propTypes = {
-  dataMatrix: PropTypes.object,
-  deleteRowTable: PropTypes.func,
+  deleteRowTable: PropTypes.func.isRequired,
 };
 
 export default connect((state => ({
