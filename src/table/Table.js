@@ -1,13 +1,13 @@
 // @flow
-import React, { Component } from 'react';
+import * as React from 'react';
 import connect from 'react-redux/es/connect/connect';
 import RowComponent from './RowComponent';
 import AvgRow from './avgRow';
-import type { Matrix } from '../MyTypes';
+import type { Matrix } from '../types/MyTypes';
 
 
 type State = {
-  percentDisplayRow: ?string,
+  percentDisplayRow: string | null,
   highlightedCells: Array<string>
 }
 
@@ -17,7 +17,7 @@ type Props= {
 }
 
 
-class Table extends Component<Props, State> {
+class Table extends React.Component<Props, State> {
     state = {
       percentDisplayRow: null,
       highlightedCells: [],
@@ -47,6 +47,7 @@ class Table extends Component<Props, State> {
             } else {
               const lightArrIndex = findMaxIndexInArr(lightArr, dataMatrix, currentValue);
               const diffArr = Math.abs(dataMatrix.cells[lightArr[lightArrIndex]].value - currentValue);
+
               if (diffArr > currentDiff) {
                 lightArr[lightArrIndex] = key;
               }
@@ -83,7 +84,7 @@ class Table extends Component<Props, State> {
       });
     };
 
-    percentDisplay = (row: string) => {
+    percentDisplay = (row: ?string) => {
       if (row) {
         this.setState({
           percentDisplayRow: row,
@@ -112,6 +113,7 @@ class Table extends Component<Props, State> {
                 key={arr.id}
                 arr={arr}
                 id={arr.id}
+                rowId={arr.id}
                 indexParentRow={index}
                 cellsDataValue={arr.cells}
                 updateDataLightArrValue={this.updateDataLightArrValue}

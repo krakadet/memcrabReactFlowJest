@@ -5,7 +5,7 @@ import {
   DELETE_ROW_TO_TABLE,
   ADD_ROW_TO_TABLE,
 } from '../constans';
-import type { Matrix, createTableButtonClickAction } from '../MyTypes';
+import type { Matrix, Row } from '../types/MyTypes';
 
 
 const id = (): string => `_${(Date.now().toString(36) + Math.random().toString(36).substr(2, 5)).toUpperCase()}`;
@@ -16,13 +16,13 @@ function getRandom(): number {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function createRow(columnCount: number) {
+function createRow(columnCount: string): Row {
   const row: {
     id: string,
     cells: Array<string>
   } = { id: id(), cells: [] };
   const cells = {};
-  for (let i = 0; i < columnCount; i += 1) {
+  for (let i = 0; i < +columnCount; i += 1) {
     const cell: {
       id: string,
       value: number,
@@ -37,7 +37,15 @@ function createRow(columnCount: number) {
 }
 
 
-export function createTableButtonClick(rowCount: number, columnCount: number, lightCount: number): createTableButtonClickAction {
+export function createTableButtonClick(rowCount: number, columnCount: string, lightCount: number):{
+  type: string,
+  payload: {
+    rowCount: number,
+    columnCount: string,
+    lightCount: number,
+    newMatrix: Matrix
+  }
+} {
   function createTable(): Matrix {
     const matrix: Matrix = {
       rows: [],
@@ -69,10 +77,11 @@ export function addCellPlusOne(idCell: string): {+type: string, +payload: string
   };
 }
 
-export function addRowToTable(valueColumn: number): {+type: string, +payload: {}} {
+export function addRowToTable(valueColumn: string): {+type: string, +payload: Row} {
+  const row = createRow(valueColumn);
   return {
     type: ADD_ROW_TO_TABLE,
-    payload: createRow(valueColumn),
+    payload: row,
   };
 }
 

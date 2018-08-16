@@ -2,6 +2,8 @@
 import { combineReducers } from 'redux';
 import state from './createChangeTable';
 
-export default combineReducers({
+const reducers = {
   state,
-});
+
+};
+export default combineReducers(reducers);

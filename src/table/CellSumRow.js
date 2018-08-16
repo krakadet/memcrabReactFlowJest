@@ -1,36 +1,38 @@
 // @flow
-import React from 'react';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
+import * as React from 'react';
 
-const getIdRow = event => event.currentTarget.parentNode.id;
+const getIdRow = (event: SyntheticEvent<HTMLTableCellElement>) => {
+  const idRow = event.currentTarget.id;
+  return idRow;
+};
 
 type Props = {
-  indexParentRow: number,
-  percentDisplay: (?number) => void,
+  percentDisplay: Function,
   sumAllCellRow: number,
+  rowId: string
 }
 
 function CellSumRow(props: Props) {
-  const handleMouseEnter = (event) => {
+  const handleMouseEnter = (event: SyntheticEvent<HTMLTableCellElement>) => {
     event.preventDefault();
     const row = getIdRow(event);
     props.percentDisplay(row);
   };
 
 
-  const handleMouseLeave = (event) => {
+  const handleMouseLeave = (event: SyntheticEvent<HTMLTableCellElement>) => {
     event.preventDefault();
     props.percentDisplay(null);
   };
 
   const {
-    indexParentRow,
+
     sumAllCellRow,
+    rowId,
   } = props;
   return (
     <td
-      id={classNames(`sumCell_${indexParentRow}`)}
+      id={`${rowId}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -38,11 +40,5 @@ function CellSumRow(props: Props) {
     </td>
   );
 }
-
-CellSumRow.propTypes = {
-  indexParentRow: PropTypes.number.isRequired,
-  percentDisplay: PropTypes.func.isRequired,
-  sumAllCellRow: PropTypes.number.isRequired,
-};
 
 export default CellSumRow;

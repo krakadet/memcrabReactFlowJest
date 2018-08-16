@@ -5,7 +5,9 @@ import {
   CREATE_TABLE_BUTTON_CLICK,
   DELETE_ROW_TO_TABLE,
 } from '../constans';
-import type { Matrix } from '../MyTypes';
+
+import type { Matrix } from '../types/MyTypes';
+
 
 const initialState = {
   valueRow: 0,
@@ -22,14 +24,10 @@ type State = {
   +valueColumn: number,
   +lightValue: number,
   +dataMatrix: Matrix
-}
-
-type Action = {
-  +type: string,
-  +payload: any,
 };
 
-export default (state: State = initialState, action: Action) => {
+
+export default (state: State = initialState, action: Object): State => {
   const { type, payload } = action;
   switch (type) {
     case CREATE_TABLE_BUTTON_CLICK:

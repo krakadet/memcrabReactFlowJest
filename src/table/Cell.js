@@ -1,13 +1,12 @@
 // @flow
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import '../style/cell.css';
 import connect from 'react-redux/es/connect/connect';
 import { addCellPlusOne } from '../action/action';
-import type { Matrix } from '../MyTypes';
+import type { Matrix } from '../types/MyTypes';
 
 type Props = {
-  addCellPlusOne: Function,
+  addCellPlusOne: (string, Matrix) => void,
   lightValue: (string, Matrix) => void,
   updateDataLightArrValue: (?string) => void,
   dataMatrix: Matrix,
@@ -65,6 +64,7 @@ class Cell extends React.PureComponent<Props> {
           style={{ backgroundSize: ` ${value}% 100%` }}
           className={this.addClass(isStyle, highlighted)}
           onClick={this.handleClick}
+          role="presentation"
           onMouseEnter={this.lightingNumbersCustom}
           onMouseLeave={this.lightingNumberNative}
         >
@@ -73,21 +73,6 @@ class Cell extends React.PureComponent<Props> {
       );
     }
 }
-
-Cell.propTypes = {
-  id: PropTypes.string.isRequired,
-  addCellPlusOne: PropTypes.func.isRequired,
-  lightValue: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-  isStyle: PropTypes.bool,
-  highlighted: PropTypes.bool.isRequired,
-  dataMatrix: PropTypes.shape({
-    rows: PropTypes.arrayOf(PropTypes.object),
-    cells: PropTypes.objectOf(PropTypes.object),
-  }).isRequired,
-  updateDataLightArrValue: PropTypes.func.isRequired,
-
-};
 
 export default connect((state => ({
   dataMatrix: state.state.dataMatrix,
