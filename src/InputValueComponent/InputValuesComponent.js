@@ -36,7 +36,7 @@ class InputValuesComponent extends React.Component<Props, State> {
     this.setState({ valueRow: event.currentTarget.value });
   };
 
-  handlerOnChangelight = (event: SyntheticEvent<HTMLInputElement>) => {
+  handlerOnCandlelight = (event: SyntheticEvent<HTMLInputElement>) => {
     this.setState({ lightValue: event.currentTarget.value });
   };
 
@@ -45,7 +45,7 @@ class InputValuesComponent extends React.Component<Props, State> {
       <form>
         <input type="number" placeholder="Input column" onChange={this.handlerOnChangeColumn} />
         <input type="number" placeholder="Input row" onChange={this.handlerOnChangeRow} />
-        <input type="number" placeholder="Input highlight" onChange={this.handlerOnChangelight} />
+        <input type="number" placeholder="Input highlight" onChange={this.handlerOnCandlelight} />
         <button type="button" className="btn" onClick={this.handlerClickBtn}>
           {' '}
           Create table

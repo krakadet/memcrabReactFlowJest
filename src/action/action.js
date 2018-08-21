@@ -6,8 +6,11 @@ import {
   ADD_ROW_TO_TABLE,
 } from '../constans';
 
-import type { Matrix, Row } from '../types/MyTypes';
-
+import type {
+  GetState,
+  Matrix,
+  Row,
+} from '../types/MyTypes';
 
 const id = (): string => `_${(Date.now().toString(36) + Math.random().toString(36).substr(2, 5)).toUpperCase()}`;
 
@@ -38,7 +41,7 @@ function createRow(columnCount: string): Row {
 }
 
 
-export function createTableAction(rowCount: number, columnCount: string, lightCount: number):{
+export function createTableAction(rowCount: number, columnCount: string, lightCount: number): {
   type: string,
   payload: {
     rowCount: number,
@@ -71,7 +74,7 @@ export function createTableAction(rowCount: number, columnCount: string, lightCo
   };
 }
 
-export function addCellPlusOne(idCell: string): {+type: string, +payload: string} {
+export function addCellPlusOneAC(idCell: string): {+type: string, +payload: string} {
   return {
     type: ADD_PLUS_ONE_IN_CELL,
     payload: idCell,
@@ -85,8 +88,8 @@ function addRow(row): {+type: string, +payload: Row} {
   };
 }
 
-export function addRowToTable() {
-  return (dispatch: Function, getState: Function) => {
+export function addRowToTableAC() {
+  return (dispatch: any, getState: GetState) => {
     const state = getState();
     const columnCount = state.state.valueColumn;
     const row = createRow(columnCount);
@@ -94,7 +97,7 @@ export function addRowToTable() {
   };
 }
 
-export function deleteRowTable(idRow: string): {+type: string, +payload: string} {
+export function deleteRowTableAC(idRow: string): {+type: string, +payload: string} {
   return {
     type: DELETE_ROW_TO_TABLE,
     payload: idRow,

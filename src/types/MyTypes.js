@@ -26,6 +26,4 @@ export type Row = {
     },
   }
 }
-
-
-
+export type GetState = () => Object;

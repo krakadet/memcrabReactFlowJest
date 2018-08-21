@@ -81,6 +81,12 @@ class RowComponent extends React.Component<Props> {
   }
 }
 
-export default connect((state => ({
-  dataMatrix: state.state.dataMatrix,
-})))(RowComponent);
+function mapStateToProps(state) {
+  return {
+    dataMatrix: state.state.dataMatrix,
+  };
+}
+
+export default connect(
+  mapStateToProps,
+)(RowComponent);

@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 
-import { addRowToTable } from '../action/action';
+import { addRowToTableAC } from '../action/action';
 
 type Props = {
   addRowToTable: Function,
@@ -28,4 +28,4 @@ class ButtonAdd extends React.Component<Props, {}> {
     }
 }
 
-export default connect(undefined, { addRowToTable })(ButtonAdd);
+export default connect(undefined, { addRowToTable: addRowToTableAC })(ButtonAdd);

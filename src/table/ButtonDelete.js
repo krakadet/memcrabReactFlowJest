@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { deleteRowTable } from '../action/action';
+import { deleteRowTableAC } from '../action/action';
 
 type Props = {
   deleteRowTable: Function,
@@ -28,4 +28,4 @@ class ButtonDelete extends React.Component<Props, {}> {
   }
 }
 
-export default connect(undefined, { deleteRowTable })(ButtonDelete);
+export default connect(undefined, { deleteRowTable: deleteRowTableAC })(ButtonDelete);

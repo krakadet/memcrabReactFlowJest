@@ -2,7 +2,7 @@
 import * as React from 'react';
 import '../style/cell.css';
 import connect from 'react-redux/es/connect/connect';
-import { addCellPlusOne } from '../action/action';
+import { addCellPlusOneAC } from '../action/action';
 import type { Matrix } from '../types/MyTypes';
 
 type Props = {
@@ -22,7 +22,7 @@ class Cell extends React.PureComponent<Props> {
       event.preventDefault();
       const { addCellPlusOne, dataMatrix } = this.props;
       addCellPlusOne(event.currentTarget.id, dataMatrix);
-    };
+    }
 
     lightingNumberNative = (event: SyntheticEvent<HTMLTableCellElement>) => {
       event.preventDefault();
@@ -77,4 +77,4 @@ class Cell extends React.PureComponent<Props> {
 export default connect((state => ({
   dataMatrix: state.state.dataMatrix,
   lightValue: state.state.lightValue,
-})), { addCellPlusOne })(Cell);
+})), { addCellPlusOne: addCellPlusOneAC })(Cell);

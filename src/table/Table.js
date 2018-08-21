@@ -60,7 +60,7 @@ class Table extends React.Component<Props, State> {
     };
 
 
-    updateDataLightArrValue = (idCell) => {
+    updateDataLightArrValue = (idCell: string) => {
       const { lightValue, dataMatrix } = this.props;
       const highlightedArr = this.newLightingCell(idCell, lightValue, dataMatrix);
       this.setState({
@@ -107,9 +107,7 @@ class Table extends React.Component<Props, State> {
               />
             ))}
             <AvgRow
-              key="cell"
               avgArr={this.avgColumnMatrix(dataMatrix)}
-
             />
           </tbody>
         </table>
