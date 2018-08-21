@@ -7,7 +7,6 @@
     "stage-0"
   ],
   "plugins": [
-    "transform-class-properties",
-    "react-flow-props-to-prop-types",
+    "transform-class-properties"
   ]
 }

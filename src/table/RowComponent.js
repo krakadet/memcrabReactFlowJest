@@ -21,68 +21,64 @@ type Props = {
 };
 
 class RowComponent extends React.Component<Props> {
-    sumRow = (rowId, data: Matrix): number => {
-      let sum = 0;
-      for (const i of data.rows[rowId].cells) {
-        sum += data.cells[i].value;
-      }
-      return sum;
-    };
+  sumRow = (rowIndex, data: Matrix): number => data.rows[rowIndex].cells.reduce((accumulator, currentValue) => accumulator + data.cells[currentValue].value, 0);
 
-    percentValue = (value, sumRow): number => Math.round(value * 100 / sumRow);
+  percentValue = (value, sumRow): number => Math.round(value * 100 / sumRow);
 
 
-    render() {
-      const {
-        cellsDataValue,
-        indexParentRow,
-        dataMatrix,
-        id,
-        updateDataLightArrValue,
-        highlightedCells,
-        percentDisplayRow,
-        percentDisplay,
-        rowId,
-      } = this.props;
-      return (
-        <tr id={id}>
-          {percentDisplayRow === id ? cellsDataValue.map(val => (
-            <Cell
-              key={dataMatrix.cells[val].id}
-              highlighted={highlightedCells.includes(val)}
-              updateDataLightArrValue={updateDataLightArrValue}
-              value={this.percentValue(dataMatrix.cells[val].value, this.sumRow(indexParentRow, dataMatrix))}
-              id={dataMatrix.cells[val].id}
-              isStyle
-            />
-          )) : cellsDataValue.map(val => (
-            <Cell
-              key={dataMatrix.cells[val].id}
-              highlighted={highlightedCells.includes(val)}
-              updateDataLightArrValue={updateDataLightArrValue}
-              value={dataMatrix.cells[val].value}
-              id={dataMatrix.cells[val].id}
-            />
-          ))
-                }
+  render() {
+    const {
+      cellsDataValue,
+      indexParentRow,
+      dataMatrix,
+      id,
+      updateDataLightArrValue,
+      highlightedCells,
+      percentDisplayRow,
+      percentDisplay,
+      rowId,
+    } = this.props;
+    return (
+      <tr id={id}>
+        {percentDisplayRow === id ? cellsDataValue.map(val => (
+          <Cell
+            key={dataMatrix.cells[val].id}
+            highlighted={highlightedCells.includes(val)}
+            updateDataLightArrValue={updateDataLightArrValue}
+            value={this.percentValue(dataMatrix.cells[val].value, this.sumRow(indexParentRow, dataMatrix))}
+            id={dataMatrix.cells[val].id}
+            isStyle
+          />
+        )) : cellsDataValue.map(val => (
+          <Cell
+            key={dataMatrix.cells[val].id}
+            highlighted={highlightedCells.includes(val)}
+            updateDataLightArrValue={updateDataLightArrValue}
+            value={dataMatrix.cells[val].value}
+            id={dataMatrix.cells[val].id}
+          />
+        ))
+        }
 
-          {
-            <CellSumRow
-              key={id}
-              percentDisplay={percentDisplay}
-              sumAllCellRow={this.sumRow(indexParentRow, dataMatrix)}
-              rowId={rowId}
-            />
-                }
-          {
-            <ButtonAdd />
-                }
-          {
-            <ButtonDelete />
-                }
-        </tr>
-      );
-    }
+        {
+          <CellSumRow
+            key={id}
+            percentDisplay={percentDisplay}
+            sumAllCellRow={this.sumRow(indexParentRow, dataMatrix)}
+            rowId={rowId}
+          />
+        }
+        {
+          <ButtonAdd />
+        }
+        {
+          <ButtonDelete
+            indexParentRow={indexParentRow}
+          />
+        }
+      </tr>
+    );
+  }
 }
 
 export default connect((state => ({

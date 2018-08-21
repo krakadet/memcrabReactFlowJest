@@ -48,7 +48,7 @@ export default (state: State = initialState, action: Object): State => {
             ...state.dataMatrix.cells,
             [payload]: {
               ...state.dataMatrix.cells[payload],
-              value: state.dataMatrix.cells[payload].value += 1,
+              value: state.dataMatrix.cells[payload].value + 1,
             },
           },
         },
@@ -60,7 +60,7 @@ export default (state: State = initialState, action: Object): State => {
         dataMatrix: {
           ...state.dataMatrix,
           cells: { ...state.dataMatrix.cells, ...payload.cells },
-          rows: [...state.dataMatrix.rows.concat(payload.row)],
+          rows: state.dataMatrix.rows.concat(payload.row),
         },
       };
 
@@ -69,7 +69,7 @@ export default (state: State = initialState, action: Object): State => {
         ...state,
         dataMatrix: {
           ...state.dataMatrix,
-          rows: state.dataMatrix.rows.slice(0, -1),
+          rows: state.dataMatrix.rows.filter((number, element) => element !== payload),
         },
       };
 

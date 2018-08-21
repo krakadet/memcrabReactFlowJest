@@ -10,7 +10,7 @@ function AvgRow(props: Props) {
   return (
     <tr>
       {avgArr.map((value: string, index: number) => (
-        <td key={`_${value}`} id={`avgCell_${index}`}>
+        <td key={`_${value}__${index}`} id={`avgCell_${index}`}>
           {value}
         </td>
       ))}

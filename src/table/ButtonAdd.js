@@ -6,14 +6,13 @@ import { addRowToTable } from '../action/action';
 
 type Props = {
   addRowToTable: Function,
-  valueColumn: string
 }
 
 class ButtonAdd extends React.Component<Props, {}> {
     handlerClick = (event: Event & { currentTarget: HTMLButtonElement }) => {
       event.preventDefault();
-      const { addRowToTable, valueColumn } = this.props;
-      addRowToTable(valueColumn);
+      const { addRowToTable } = this.props;
+      addRowToTable();
     };
 
     render() {
@@ -29,6 +28,4 @@ class ButtonAdd extends React.Component<Props, {}> {
     }
 }
 
-export default connect((state => ({
-  valueColumn: state.state.valueColumn,
-})), { addRowToTable })(ButtonAdd);
+export default connect(undefined, { addRowToTable })(ButtonAdd);

@@ -13,7 +13,7 @@ type State = {
 
 type Props= {
   dataMatrix: Matrix,
-  lightValue: number
+  lightValue: string
 }
 
 
@@ -23,40 +23,24 @@ class Table extends React.Component<Props, State> {
       highlightedCells: [],
     };
 
-    newLightingCell = (idCell: string, cellsCount: number, dataMatrix: Matrix): Array<string> => {
-      const findMaxIndexInArr = (lightArr: Array<string>, objData: Matrix, valueToCompare): number => {
-        let maxDifference = 0;
-        let lightArrIndex = 0;
-        for (let i = 0; i < lightArr.length; i += 1) {
-          const currentDifference = Math.abs(objData.cells[lightArr[i]].value - valueToCompare);
-          if (currentDifference > maxDifference) {
-            maxDifference = currentDifference;
-            lightArrIndex = i;
-          }
-        }
-        return lightArrIndex;
-      };
-      const lightArr = [];
+    newLightingCell = (idCell: string, cellsCount: string, dataMatrix: Matrix): Array<string> => {
       if (idCell !== undefined) {
-        const currentValue: number = +dataMatrix.cells[idCell].value;
-        for (const key in dataMatrix.cells) {
-          if (key !== idCell) {
-            const currentDiff: number = Math.abs(currentValue - dataMatrix.cells[key].value);
-            if (lightArr.length < cellsCount) {
-              lightArr[lightArr.length] = key;
-            } else {
-              const lightArrIndex = findMaxIndexInArr(lightArr, dataMatrix, currentValue);
-              const diffArr = Math.abs(dataMatrix.cells[lightArr[lightArrIndex]].value - currentValue);
-
-              if (diffArr > currentDiff) {
-                lightArr[lightArrIndex] = key;
-              }
-            }
-          }
-        }
-        return lightArr;
+        const useArr = Object.keys(dataMatrix.cells);
+        const valueOfCell = dataMatrix.cells[idCell].value;
+        const compare = (first: string, second: string): 1 | 0 | -1 => {
+          const firstValue = dataMatrix.cells[first].value;
+          const secondValue = dataMatrix.cells[second].value;
+          const absFirst = Math.abs(firstValue - valueOfCell);
+          const absSecond = Math.abs(secondValue - valueOfCell);
+          if (absFirst < absSecond) return -1;
+          if (absFirst > absSecond) return 1;
+          return 0;
+        };
+        useArr.sort(compare);
+        const count = +cellsCount + 1;
+        return useArr.slice(1, count);
       }
-      return lightArr;
+      return [];
     };
 
 

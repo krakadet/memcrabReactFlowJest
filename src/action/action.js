@@ -5,6 +5,7 @@ import {
   DELETE_ROW_TO_TABLE,
   ADD_ROW_TO_TABLE,
 } from '../constans';
+
 import type { Matrix, Row } from '../types/MyTypes';
 
 
@@ -37,7 +38,7 @@ function createRow(columnCount: string): Row {
 }
 
 
-export function createTableButtonClick(rowCount: number, columnCount: string, lightCount: number):{
+export function createTableAction(rowCount: number, columnCount: string, lightCount: number):{
   type: string,
   payload: {
     rowCount: number,
@@ -77,16 +78,25 @@ export function addCellPlusOne(idCell: string): {+type: string, +payload: string
   };
 }
 
-export function addRowToTable(valueColumn: string): {+type: string, +payload: Row} {
-  const row = createRow(valueColumn);
+function addRow(row): {+type: string, +payload: Row} {
   return {
     type: ADD_ROW_TO_TABLE,
     payload: row,
   };
 }
 
-export function deleteRowTable(): {+type: string} {
+export function addRowToTable() {
+  return (dispatch: Function, getState: Function) => {
+    const state = getState();
+    const columnCount = state.state.valueColumn;
+    const row = createRow(columnCount);
+    dispatch(addRow(row));
+  };
+}
+
+export function deleteRowTable(idRow: string): {+type: string, +payload: string} {
   return {
     type: DELETE_ROW_TO_TABLE,
+    payload: idRow,
   };
 }

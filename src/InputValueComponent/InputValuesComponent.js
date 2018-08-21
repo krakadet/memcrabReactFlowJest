@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { createTableButtonClick } from '../action/action';
+import { createTableAction } from '../action/action';
 
 type Props = {
   createTableButtonClick: Function
@@ -10,6 +10,7 @@ type Props = {
 type State = {
   valueRow: string,
   valueColumn: string,
+
   lightValue: string,
 };
 
@@ -42,9 +43,9 @@ class InputValuesComponent extends React.Component<Props, State> {
   render() {
     return (
       <form>
-        <input type="number" placeholder="Input column" onChange={this.handlerOnChangeColumn}/>
-        <input type="number" placeholder="Input row" onChange={this.handlerOnChangeRow}/>
-        <input type="number" placeholder="Input highlight" onChange={this.handlerOnChangelight}/>
+        <input type="number" placeholder="Input column" onChange={this.handlerOnChangeColumn} />
+        <input type="number" placeholder="Input row" onChange={this.handlerOnChangeRow} />
+        <input type="number" placeholder="Input highlight" onChange={this.handlerOnChangelight} />
         <button type="button" className="btn" onClick={this.handlerClickBtn}>
           {' '}
           Create table
@@ -56,4 +57,4 @@ class InputValuesComponent extends React.Component<Props, State> {
 
 export default connect(state => ({
   state: state.dataMatrix,
-}), { createTableButtonClick })(InputValuesComponent);
+}), { createTableButtonClick: createTableAction })(InputValuesComponent);
