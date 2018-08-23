@@ -20,10 +20,10 @@ type Props = {
   rowId: string,
 };
 
-class RowComponent extends React.Component<Props> {
-  sumRow = (rowIndex, data: Matrix): number => data.rows[rowIndex].cells.reduce((accumulator, currentValue) => accumulator + data.cells[currentValue].value, 0);
+export class RowComponent extends React.Component<Props> {
+  sumRow = (rowIndex: number, data: Matrix): number => data.rows[rowIndex].cells.reduce((accumulator, currentValue) => accumulator + data.cells[currentValue].value, 0);
 
-  percentValue = (value, sumRow): number => Math.round(value * 100 / sumRow);
+  percentValue = (value: number, sumRow: number): number => Math.round(value * 100 / sumRow);
 
 
   render() {
@@ -40,26 +40,17 @@ class RowComponent extends React.Component<Props> {
     } = this.props;
     return (
       <tr id={id}>
-        {percentDisplayRow === id ? cellsDataValue.map(val => (
+        {cellsDataValue.map(val => (
           <Cell
             key={dataMatrix.cells[val].id}
             highlighted={highlightedCells.includes(val)}
             updateDataLightArrValue={updateDataLightArrValue}
-            value={this.percentValue(dataMatrix.cells[val].value, this.sumRow(indexParentRow, dataMatrix))}
+            value={percentDisplayRow === id ? this.percentValue(dataMatrix.cells[val].value, this.sumRow(indexParentRow, dataMatrix)) : dataMatrix.cells[val].value}
             id={dataMatrix.cells[val].id}
-            isStyle
-          />
-        )) : cellsDataValue.map(val => (
-          <Cell
-            key={dataMatrix.cells[val].id}
-            highlighted={highlightedCells.includes(val)}
-            updateDataLightArrValue={updateDataLightArrValue}
-            value={dataMatrix.cells[val].value}
-            id={dataMatrix.cells[val].id}
+            isStyle={percentDisplayRow === id}
           />
         ))
         }
-
         {
           <CellSumRow
             key={id}
@@ -88,5 +79,5 @@ function mapStateToProps(state) {
 }
 
 export default connect(
-  mapStateToProps,
+  mapStateToProps, undefined,
 )(RowComponent);

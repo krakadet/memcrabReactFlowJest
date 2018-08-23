@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4c48808-bb0d-495b-ae94-de5f588c3d91" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_tests_/InputValuesComponent.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_tests_/action.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_tests_/avgRow.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_tests_/buttonAdd.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_tests_/buttonDelete.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_tests_/cell.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_tests_/cellSumRow.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducer/createChangeTable.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="c4c48808-bb0d-495b-ae94-de5f588c3d91" name="Default Changelist" comment="now all works">
+      <change afterPath="$PROJECT_DIR$/src/test/action.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/rowComponent.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InputValueComponent/InputValuesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputValueComponent/Cell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/action.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/action.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/createChangeTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/createChangeTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/table/ButtonAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/ButtonAdd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/table/ButtonDelete.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/ButtonDelete.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/MyTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/MyTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InputValueComponent/Cell.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputValueComponent/InputValuesComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_tests_/InputValuesComponent.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/InputValuesComponent.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_tests_/action.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_tests_/avgRow.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/avgRow.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_tests_/buttonAdd.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/buttonAdd.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_tests_/buttonDelete.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/buttonDelete.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_tests_/cell.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/cell.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_tests_/cellSumRow.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/cellSumRow.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/table/Cell.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/Cell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/table/RowComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/RowComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -140,8 +138,8 @@
           <entry key="flowconfig" value="7" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="9" />
-          <entry key="js" value="214" />
-          <entry key="json" value="10" />
+          <entry key="js" value="235" />
+          <entry key="json" value="11" />
           <entry key="lock" value="1" />
           <entry key="snap" value="4" />
           <entry key="svg" value="2" />
@@ -152,8 +150,8 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="9" />
           <entry key="Ini" value="5" />
-          <entry key="JSON" value="15" />
-          <entry key="JavaScript" value="214" />
+          <entry key="JSON" value="16" />
+          <entry key="JavaScript" value="235" />
           <entry key="Jest Snapshot" value="4" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="SVG" value="2" />
@@ -188,19 +186,19 @@
           <entry key="eslintrc" value="2" />
           <entry key="flowconfig" value="64" />
           <entry key="gitignore" value="11" />
-          <entry key="js" value="6405" />
-          <entry key="json" value="11" />
+          <entry key="js" value="6558" />
+          <entry key="json" value="25" />
           <entry key="lock" value="1" />
-          <entry key="txt" value="87" />
+          <entry key="txt" value="106" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1" />
           <entry key="Ini" value="64" />
-          <entry key="JSON" value="13" />
-          <entry key="JavaScript" value="6404" />
-          <entry key="PLAIN_TEXT" value="104" />
+          <entry key="JSON" value="27" />
+          <entry key="JavaScript" value="6557" />
+          <entry key="PLAIN_TEXT" value="123" />
           <entry key="yarn.lock" value="1" />
         </counts>
       </usages-collector>
@@ -211,8 +209,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/action/action.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1464">
-              <caret line="72" column="5" selection-start-line="65" selection-start-column="9" selection-end-line="72" selection-end-column="5" />
+            <state relative-caret-position="-81">
+              <caret line="63" column="3" lean-forward="true" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
               <folding>
                 <element signature="e#9#135#0" expanded="true" />
               </folding>
@@ -220,13 +218,100 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/_tests_/action.test.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/InputValuesComponent.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+            <state relative-caret-position="48">
+              <caret line="2" column="81" selection-start-line="2" selection-start-column="81" selection-end-line="2" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/table/Cell.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1186">
+              <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
               <folding>
-                <element signature="e#9#80#0" expanded="true" />
+                <element signature="e#9#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/rowComponent.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/table/Table.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="117" selection-start-line="117" selection-end-line="121" />
+              <folding>
+                <element signature="e#9#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/table/RowComponent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+              <folding>
+                <element signature="e#30#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flow-typed/npm/react-redux_v5.x.x.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-39">
+              <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/cellSumRow.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" selection-end-line="11" />
+              <folding>
+                <element signature="e#1#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/table/CellSumRow.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/table/ButtonDelete.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="2" column="4" selection-start-line="2" selection-end-line="2" selection-end-column="38" />
+              <folding>
+                <element signature="n#ButtonDelete#0" />
               </folding>
             </state>
           </provider>
@@ -269,12 +354,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/flow-typed/MyTypes.js" />
-        <option value="$PROJECT_DIR$/src/InputValueComponent/HighlightNeighboursNumber.js" />
-        <option value="$PROJECT_DIR$/src/InputValueComponent/InputColumn.js" />
-        <option value="$PROJECT_DIR$/src/InputValueComponent/InputRow.js" />
-        <option value="$PROJECT_DIR$/.eslintrc" />
-        <option value="$PROJECT_DIR$/src/reducer/reducers.js" />
         <option value="$PROJECT_DIR$/src/types/reduser.js" />
         <option value="$PROJECT_DIR$/src/table/CellSumRow.js" />
         <option value="$PROJECT_DIR$/src/store/store.js" />
@@ -282,7 +361,6 @@
         <option value="$PROJECT_DIR$/src/table/avgRow.js" />
         <option value="$PROJECT_DIR$/src/oldVersionfile/oldLightArr.js" />
         <option value="$PROJECT_DIR$/src/registerServiceWorker.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/.flowconfig" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/table/table.js.snap.js" />
@@ -295,7 +373,6 @@
         <option value="$PROJECT_DIR$/src/constans.js" />
         <option value="$PROJECT_DIR$/src/table/rowComponent.test.js" />
         <option value="$PROJECT_DIR$/yarn.lock" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/InputValueComponent/inputValue.test.js" />
         <option value="$PROJECT_DIR$/src/types/MyTypes.js" />
         <option value="$PROJECT_DIR$/src/reducer/createChangeTable.js" />
@@ -305,12 +382,9 @@
         <option value="$PROJECT_DIR$/src/app.test.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/table/table.test.js" />
-        <option value="$PROJECT_DIR$/src/table/RowComponent.js" />
-        <option value="$PROJECT_DIR$/src/table/Cell.js" />
         <option value="$PROJECT_DIR$/src/reducer/createChangeTable.spec.js" />
         <option value="$PROJECT_DIR$/src/action/action.test.js" />
         <option value="$PROJECT_DIR$/src/InputValueComponent/InputValuesComponent.test.js" />
-        <option value="$PROJECT_DIR$/src/InputValueComponent/InputValuesComponent.js" />
         <option value="$PROJECT_DIR$/src/table/ButtonAdd.js" />
         <option value="$PROJECT_DIR$/src/table/buttonAdd.test.js" />
         <option value="$PROJECT_DIR$/src/table/buttonDelete.test.js" />
@@ -320,6 +394,17 @@
         <option value="$PROJECT_DIR$/src/InputValueComponent/Cell.js" />
         <option value="$PROJECT_DIR$/src/action/action.js" />
         <option value="$PROJECT_DIR$/src/_tests_/action.test.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/test/jestsetup.js" />
+        <option value="$PROJECT_DIR$/test/action.test.js" />
+        <option value="$PROJECT_DIR$/test/avgRow.test.js" />
+        <option value="$PROJECT_DIR$/test/InputValuesComponent.test.js" />
+        <option value="$PROJECT_DIR$/src/test/avgRow.test.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/InputValueComponent/InputValuesComponent.js" />
+        <option value="$PROJECT_DIR$/src/test/rowComponent.test.js" />
+        <option value="$PROJECT_DIR$/src/table/RowComponent.js" />
+        <option value="$PROJECT_DIR$/src/table/Cell.js" />
       </list>
     </option>
   </component>
@@ -408,13 +493,25 @@
               <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="_tests_" type="462c0819:PsiDirectoryNode" />
+              <item name="action" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="InputValueComponent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="table" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -457,16 +554,16 @@
     <property name="settings.editor.splitter.proportion" value="0.23174293" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/component/InputValueComponent" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/src/_tests_" />
       <recent name="$PROJECT_DIR$/src/table" />
       <recent name="$PROJECT_DIR$/src/oldVersionfile" />
-      <recent name="$PROJECT_DIR$/src/types" />
-      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/component/InputValueComponent" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -481,7 +578,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.createTableActionTest">
+  <component name="RunManager" selected="Jest.renders correctly (2)">
+    <configuration name="addCellPlusOneACTest" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/action.test.js" />
+      <test-names>
+        <test-name value="addCellPlusOneACTest" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="createTableActionTest" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -500,7 +609,7 @@
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/table/buttonAdd.test.js" />
+      <test-file value="$PROJECT_DIR$/src/test/avgRow.test.js" />
       <test-names>
         <test-name value="renders correctly" />
       </test-names>
@@ -512,19 +621,7 @@
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/table/buttonDelete.test.js" />
-      <test-names>
-        <test-name value="renders correctly" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="renders correctly (4)" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/_tests_/cell.test.js" />
+      <test-file value="$PROJECT_DIR$/src/test/rowComponent.test.js" />
       <test-names>
         <test-name value="renders correctly" />
       </test-names>
@@ -536,26 +633,26 @@
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/InputValueComponent/InputValuesComponent.test.js" />
+      <test-file value="$PROJECT_DIR$/test/avgRow.test.js" />
       <test-names>
         <test-name value="renders correctly" />
       </test-names>
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Jest.createTableActionTest" />
+      <item itemvalue="Jest.addCellPlusOneACTest" />
       <item itemvalue="Jest.renders correctly" />
       <item itemvalue="Jest.renders correctly (1)" />
       <item itemvalue="Jest.renders correctly (2)" />
-      <item itemvalue="Jest.renders correctly (4)" />
-      <item itemvalue="Jest.createTableActionTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.createTableActionTest" />
-        <item itemvalue="Jest.renders correctly (4)" />
         <item itemvalue="Jest.renders correctly (2)" />
         <item itemvalue="Jest.renders correctly (1)" />
         <item itemvalue="Jest.renders correctly" />
+        <item itemvalue="Jest.addCellPlusOneACTest" />
+        <item itemvalue="Jest.createTableActionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -646,7 +743,7 @@
       <workItem from="1534917221910" duration="20787000" />
       <workItem from="1534944233426" duration="4000" />
       <workItem from="1534944294251" duration="6624000" />
-      <workItem from="1535004411008" duration="247000" />
+      <workItem from="1535004411008" duration="7716000" />
     </task>
     <task id="LOCAL-00001" summary="add new commit">
       <created>1533561659605</created>
@@ -760,43 +857,50 @@
       <option name="project" value="LOCAL" />
       <updated>1534863135579</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="now all works">
+      <created>1535004822045</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1535004822045</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="renders_correctly_(1) - 2018.08.22 at 18h 00m 11s.xml">
-      <configuration name="renders correctly (1)" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Update_snapshot_for_renders_correctly - 2018.08.23 at 11h 39m 01s.xml">
+      <configuration name="Update snapshot for renders correctly" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="renders_correctly_(1) - 2018.08.22 at 18h 00m 28s.xml">
-      <configuration name="renders correctly (1)" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="renders_correctly_(2) - 2018.08.22 at 18h 01m 36s.xml">
+    <history-entry file="renders_correctly_(2) - 2018.08.23 at 11h 44m 49s.xml">
       <configuration name="renders correctly (2)" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="renders_correctly_(2) - 2018.08.22 at 18h 01m 54s.xml">
+    <history-entry file="renders_correctly_(2) - 2018.08.23 at 11h 45m 12s.xml">
       <configuration name="renders correctly (2)" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="renders_correctly_(4) - 2018.08.22 at 18h 05m 02s.xml">
-      <configuration name="renders correctly (4)" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="renders_correctly_(2) - 2018.08.23 at 11h 47m 11s.xml">
+      <configuration name="renders correctly (2)" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="renders_correctly_(4) - 2018.08.22 at 18h 05m 22s.xml">
-      <configuration name="renders correctly (4)" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="renders_correctly_(2) - 2018.08.23 at 12h 01m 52s.xml">
+      <configuration name="renders correctly (2)" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="createTableActionTest - 2018.08.22 at 18h 13m 04s.xml">
-      <configuration name="createTableActionTest" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="renders_correctly_(2) - 2018.08.23 at 12h 02m 21s.xml">
+      <configuration name="renders correctly (2)" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="createTableActionTest - 2018.08.22 at 18h 13m 12s.xml">
-      <configuration name="createTableActionTest" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="renders_correctly_(2) - 2018.08.23 at 12h 02m 36s.xml">
+      <configuration name="renders correctly (2)" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="createTableActionTest - 2018.08.22 at 18h 13m 47s.xml">
-      <configuration name="createTableActionTest" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="renders_correctly_(2) - 2018.08.23 at 12h 02m 58s.xml">
+      <configuration name="renders correctly (2)" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="createTableActionTest - 2018.08.22 at 18h 14m 24s.xml">
-      <configuration name="createTableActionTest" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="renders_correctly_(2) - 2018.08.23 at 12h 05m 34s.xml">
+      <configuration name="renders correctly (2)" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="renders_correctly_(2) - 2018.08.23 at 12h 07m 05s.xml">
+      <configuration name="renders correctly (2)" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="452960000" />
+    <option name="totallyTimeSpent" value="460429000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -809,28 +913,48 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="-2" width="1280" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26491648" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1718377" />
       <window_info id="Structure" order="1" weight="0.24980111" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3277405" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32997763" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4988067" weight="0.32997763" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39932886" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32997763" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4988067" weight="0.3344519" />
-      <window_info anchor="bottom" x="2471" y="331" width="178" height="370" id="Flow" order="8" sideWeight="0.4972156" weight="0.23266219" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50278443" side_tool="true" weight="0.23378076" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4972156" weight="0.3344519" />
+      <window_info active="true" anchor="bottom" x="2471" y="331" width="178" height="370" id="Flow" order="8" sideWeight="0.4956245" visible="true" weight="0.23266219" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50119334" side_tool="true" weight="0.32997763" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" x="674" y="84" width="781" height="996" id="Terminal" order="11" sideWeight="0.499388" weight="0.34451902" />
+      <window_info anchor="bottom" x="674" y="84" width="781" height="996" id="Terminal" order="11" sideWeight="0.4988067" weight="0.34451902" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SvgViewer" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13206047" />
+      <window_info id="Structure" order="1" weight="0.24980111" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3277405" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4988067" weight="0.32997763" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39932886" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32997763" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4972156" weight="0.3344519" />
+      <window_info anchor="bottom" x="2471" y="331" width="178" height="370" id="Flow" order="8" sideWeight="0.4956245" weight="0.23266219" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50119334" side_tool="true" weight="0.32997763" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" x="674" y="84" width="781" height="996" id="Terminal" order="11" sideWeight="0.4988067" visible="true" weight="0.34451902" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SvgViewer" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -876,7 +1000,8 @@
     <MESSAGE value="Flow have not mistakes" />
     <MESSAGE value="Flow have not mistakes add new  function lightArray" />
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="now all works" />
+    <option name="LAST_COMMIT_MESSAGE" value="now all works" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
@@ -888,8 +1013,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/oldVersionfile/oldLightArr.js" />
-    <entry file="file://$PROJECT_DIR$/src/InputValueComponent/HighlightNeighboursNumber.js" />
     <entry file="file://$PROJECT_DIR$/src/InputValueComponent/InputColumn.js" />
     <entry file="file://$PROJECT_DIR$/src/InputValueComponent/InputRow.js" />
     <entry file="file://$PROJECT_DIR$/src/registerServiceWorker.js">
@@ -913,13 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -979,39 +1095,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/table/rowComponent.test.js" />
-    <entry file="file://$PROJECT_DIR$/src/_tests_/cellSumRow.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yarn.lock">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/types/MyTypes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyTypes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1368">
-          <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reducer/reducers.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1027,10 +1115,132 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/InputValueComponent/inputValue.test.js" />
+    <entry file="file://$PROJECT_DIR$/src/app.test.js" />
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding>
+            <element signature="e#9#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/table/table.test.js" />
+    <entry file="file://$PROJECT_DIR$/src/table/cell.test.js" />
+    <entry file="file://$PROJECT_DIR$/src/table/ButtonAdd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="e#9#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/buttonDelete.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/buttonAdd.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="9" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/types/MyTypes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyTypes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/table/avgRow.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/action.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+          <folding>
+            <element signature="e#9#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducer/createChangeTable.spec.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/avgRow.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InputValueComponent/InputValuesComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding>
+            <element signature="e#9#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/jestsetup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/cell.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1041,120 +1251,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/InputValueComponent/inputValue.test.js" />
-    <entry file="file://$PROJECT_DIR$/flow-typed/npm/react-redux_v5.x.x.js">
+    <entry file="file://$PROJECT_DIR$/src/table/ButtonDelete.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="130" column="14" selection-start-line="130" selection-start-column="14" selection-end-line="130" selection-end-column="14" />
+        <state relative-caret-position="48">
+          <caret line="2" column="4" selection-start-line="2" selection-end-line="2" selection-end-column="38" />
+          <folding>
+            <element signature="n#ButtonDelete#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.test.js" />
-    <entry file="file://$PROJECT_DIR$/src/App.js">
+    <entry file="file://$PROJECT_DIR$/src/test/cellSumRow.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        <state>
+          <caret lean-forward="true" selection-end-line="11" />
+          <folding>
+            <element signature="e#1#27#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/table/Table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1968">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="278">
+          <caret line="117" selection-start-line="117" selection-end-line="121" />
+          <folding>
+            <element signature="e#9#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/table/table.test.js" />
-    <entry file="file://$PROJECT_DIR$/src/table/cell.test.js" />
-    <entry file="file://$PROJECT_DIR$/src/table/RowComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="926">
-          <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/table/Cell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1848">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_tests_/avgRow.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/table/ButtonAdd.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/table/ButtonDelete.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_tests_/buttonDelete.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_tests_/buttonAdd.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_tests_/InputValuesComponent.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" lean-forward="true" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InputValueComponent/Cell.js">
+    <entry file="file://$PROJECT_DIR$/src/test/InputValuesComponent.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+          <caret line="2" column="81" selection-start-line="2" selection-start-column="81" selection-end-line="2" selection-end-column="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/_tests_/cell.test.js">
+    <entry file="file://$PROJECT_DIR$/src/test/rowComponent.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        <state relative-caret-position="192">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducer/createChangeTable.spec.js">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/flow-typed/npm/react-redux_v5.x.x.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-39">
+          <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/action/action.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1464">
-          <caret line="72" column="5" selection-start-line="65" selection-start-column="9" selection-end-line="72" selection-end-column="5" />
+        <state relative-caret-position="-81">
+          <caret line="63" column="3" lean-forward="true" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
           <folding>
             <element signature="e#9#135#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/_tests_/action.test.js">
+    <entry file="file://$PROJECT_DIR$/src/table/Cell.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        <state relative-caret-position="-1186">
+          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
           <folding>
-            <element signature="e#9#80#0" expanded="true" />
+            <element signature="e#9#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/table/RowComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+          <folding>
+            <element signature="e#30#61#0" expanded="true" />
           </folding>
         </state>
       </provider>

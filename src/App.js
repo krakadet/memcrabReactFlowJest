@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import Table from './table/Table';
-import InputValuesComponent from './InputValueComponent/Cell';
+import InputValuesComponent from './InputValueComponent/InputValuesComponent';
 import './style/App.css';
 
 function App() {

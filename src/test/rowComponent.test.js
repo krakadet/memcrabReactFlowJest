@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Cell } from '../InputValueComponent/Cell';
+import { RowComponent } from '../table/RowComponent';
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <Cell />,
+    <RowComponent  />,
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });

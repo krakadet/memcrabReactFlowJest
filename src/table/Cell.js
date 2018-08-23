@@ -1,28 +1,26 @@
 // @flow
 import * as React from 'react';
 import '../style/cell.css';
-import connect from 'react-redux/es/connect/connect';
+import { connect } from 'react-redux';
 import { addCellPlusOneAC } from '../action/action';
-import type { Matrix } from '../types/MyTypes';
 
 type Props = {
-  addCellPlusOne: (string, Matrix) => void,
-  lightValue: (string, Matrix) => void,
+  addCellPlusOne: Function,
+  lightValue: string,
   updateDataLightArrValue: (?string) => void,
-  dataMatrix: Matrix,
   id: string,
   value: number,
-  highlighted: string,
+  highlighted: boolean,
   isStyle: boolean,
 };
 
 
-class Cell extends React.PureComponent<Props> {
+export class Cell extends React.PureComponent<Props, {}> {
     handleClick = (event: SyntheticEvent<HTMLButtonElement>) => {
       event.preventDefault();
-      const { addCellPlusOne, dataMatrix } = this.props;
-      addCellPlusOne(event.currentTarget.id, dataMatrix);
-    }
+      const { addCellPlusOne } = this.props;
+      addCellPlusOne(event.currentTarget.id);
+    };
 
     lightingNumberNative = (event: SyntheticEvent<HTMLTableCellElement>) => {
       event.preventDefault();
@@ -40,7 +38,7 @@ class Cell extends React.PureComponent<Props> {
       }
     };
 
-    addClass = (isStyle, highlighted) => {
+    addClass = (isStyle: boolean, highlighted: boolean) => {
       if (isStyle) {
         return 'filled';
       }
@@ -49,7 +47,6 @@ class Cell extends React.PureComponent<Props> {
       }
       return '';
     };
-
 
     render() {
       const {
@@ -75,6 +72,5 @@ class Cell extends React.PureComponent<Props> {
 }
 
 export default connect((state => ({
-  dataMatrix: state.state.dataMatrix,
   lightValue: state.state.lightValue,
 })), { addCellPlusOne: addCellPlusOneAC })(Cell);
