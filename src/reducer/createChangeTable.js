@@ -9,7 +9,7 @@ import {
 import type { Matrix } from '../types/MyTypes';
 
 
-const initialState = {
+export const initialState = {
   valueRow: 0,
   valueColumn: 0,
   lightValue: 0,

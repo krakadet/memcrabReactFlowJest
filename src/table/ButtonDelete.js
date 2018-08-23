@@ -8,7 +8,7 @@ type Props = {
   indexParentRow: number,
 };
 
-class ButtonDelete extends React.Component<Props, {}> {
+export class ButtonDelete extends React.Component<Props, {}> {
   handlerClick = (event: Event & { currentTarget: HTMLButtonElement }) => {
     event.preventDefault();
     const { deleteRowTable, indexParentRow } = this.props;

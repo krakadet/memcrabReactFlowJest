@@ -14,8 +14,7 @@ type State = {
   lightValue: string,
 };
 
-
-class InputValuesComponent extends React.Component<Props, State> {
+class Cell extends React.Component<Props, State> {
   state = {
     valueRow: '0',
     valueColumn: '0',
@@ -57,4 +56,4 @@ class InputValuesComponent extends React.Component<Props, State> {
 
 export default connect(state => ({
   state: state.dataMatrix,
-}), { createTableButtonClick: createTableAction })(InputValuesComponent);
+}), { createTableButtonClick: createTableAction })(Cell);

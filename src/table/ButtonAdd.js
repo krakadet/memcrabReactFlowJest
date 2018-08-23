@@ -8,7 +8,7 @@ type Props = {
   addRowToTable: Function,
 }
 
-class ButtonAdd extends React.Component<Props, {}> {
+export class ButtonAdd extends React.Component<Props, {}> {
     handlerClick = (event: Event & { currentTarget: HTMLButtonElement }) => {
       event.preventDefault();
       const { addRowToTable } = this.props;

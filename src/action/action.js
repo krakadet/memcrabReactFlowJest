@@ -41,7 +41,7 @@ function createRow(columnCount: string): Row {
 }
 
 
-export function createTableAction(rowCount: number, columnCount: string, lightCount: number): {
+export const createTableAction = (rowCount: number, columnCount: string, lightCount: number): {
   type: string,
   payload: {
     rowCount: number,
@@ -49,7 +49,7 @@ export function createTableAction(rowCount: number, columnCount: string, lightCo
     lightCount: number,
     newMatrix: Matrix
   }
-} {
+} => {
   function createTable(): Matrix {
     const matrix: Matrix = {
       rows: [],
@@ -74,12 +74,10 @@ export function createTableAction(rowCount: number, columnCount: string, lightCo
   };
 }
 
-export function addCellPlusOneAC(idCell: string): {+type: string, +payload: string} {
-  return {
-    type: ADD_PLUS_ONE_IN_CELL,
-    payload: idCell,
-  };
-}
+export const addCellPlusOneAC = (idCell: string): {+type: string, +payload: string} => ({
+  type: ADD_PLUS_ONE_IN_CELL,
+  payload: idCell,
+});
 
 function addRow(row): {+type: string, +payload: Row} {
   return {
@@ -88,16 +86,14 @@ function addRow(row): {+type: string, +payload: Row} {
   };
 }
 
-export function addRowToTableAC() {
-  return (dispatch: any, getState: GetState) => {
-    const state = getState();
-    const columnCount = state.state.valueColumn;
-    const row = createRow(columnCount);
-    dispatch(addRow(row));
-  };
-}
+export const addRowToTableAC = () => (dispatch: any, getState: GetState) => {
+  const state = getState();
+  const columnCount = state.state.valueColumn;
+  const row = createRow(columnCount);
+  dispatch(addRow(row));
+};
 
-export function deleteRowTableAC(idRow: string): {+type: string, +payload: string} {
+export const deleteRowTableAC = (idRow: string): {+type: string, +payload: string} => {
   return {
     type: DELETE_ROW_TO_TABLE,
     payload: idRow,
