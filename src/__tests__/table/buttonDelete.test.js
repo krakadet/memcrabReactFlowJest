@@ -1,11 +1,11 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer';
-import CellSumRow from '../table/CellSumRow';
+import { ButtonDelete } from '../../table/ButtonDelete';
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <CellSumRow  />,
+    <ButtonDelete />,
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });

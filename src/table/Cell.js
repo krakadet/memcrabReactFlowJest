@@ -72,5 +72,5 @@ export class Cell extends React.PureComponent<Props, {}> {
 }
 
 export default connect((state => ({
-  lightValue: state.state.lightValue,
+  lightValue: state.store.lightValue,
 })), { addCellPlusOne: addCellPlusOneAC })(Cell);

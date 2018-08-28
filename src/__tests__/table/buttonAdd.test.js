@@ -1,10 +1,12 @@
+
+
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ButtonDelete } from '../table/ButtonDelete';
+import { ButtonAdd } from '../../table/ButtonAdd';
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <ButtonDelete />,
+    <ButtonAdd />,
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });

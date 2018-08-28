@@ -37,15 +37,16 @@ export class RowComponent extends React.Component<Props> {
       percentDisplayRow,
       percentDisplay,
       rowId,
-    } = this.props;
-    return (
+    } = this.props; return (
       <tr id={id}>
         {cellsDataValue.map(val => (
           <Cell
             key={dataMatrix.cells[val].id}
             highlighted={highlightedCells.includes(val)}
             updateDataLightArrValue={updateDataLightArrValue}
-            value={percentDisplayRow === id ? this.percentValue(dataMatrix.cells[val].value, this.sumRow(indexParentRow, dataMatrix)) : dataMatrix.cells[val].value}
+            value={percentDisplayRow === id
+              ? this.percentValue(dataMatrix.cells[val].value, this.sumRow(indexParentRow, dataMatrix))
+              : dataMatrix.cells[val].value}
             id={dataMatrix.cells[val].id}
             isStyle={percentDisplayRow === id}
           />
@@ -74,7 +75,7 @@ export class RowComponent extends React.Component<Props> {
 
 function mapStateToProps(state) {
   return {
-    dataMatrix: state.state.dataMatrix,
+    dataMatrix: state.store.dataMatrix,
   };
 }
 

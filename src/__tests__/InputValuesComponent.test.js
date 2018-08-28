@@ -1,10 +1,11 @@
+
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ButtonAdd } from '../table/ButtonAdd';
+import { InputValuesComponent } from '../InputValueComponent/InputValuesComponent';
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <ButtonAdd />,
+    <InputValuesComponent />,
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });

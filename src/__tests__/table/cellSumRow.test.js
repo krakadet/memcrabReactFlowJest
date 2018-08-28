@@ -1,10 +1,11 @@
+// @flow
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Cell } from '../table/Cell';
+import CellSumRow from '../../table/CellSumRow';
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <Cell />,
+    <CellSumRow />,
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });

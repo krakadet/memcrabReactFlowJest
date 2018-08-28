@@ -1,9 +1,9 @@
 // @flow
 import { combineReducers } from 'redux';
-import state from './createChangeTable';
+import store from './createChangeTable';
 
 const reducers = {
-  state,
+  store,
 
 };
 export default combineReducers(reducers);

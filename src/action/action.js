@@ -20,7 +20,7 @@ function getRandom(): number {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function createRow(columnCount: string): Row {
+export function createRow(columnCount: string): Row {
   const row: {
     id: string,
     cells: Array<string>
@@ -41,12 +41,12 @@ function createRow(columnCount: string): Row {
 }
 
 
-export const createTableAction = (rowCount: number, columnCount: string, lightCount: number): {
+export const createTableAction = (rowCount: string, columnCount: string, lightCount: string): {
   type: string,
   payload: {
-    rowCount: number,
+    rowCount: string,
     columnCount: string,
-    lightCount: number,
+    lightCount: string,
     newMatrix: Matrix
   }
 } => {
@@ -55,7 +55,7 @@ export const createTableAction = (rowCount: number, columnCount: string, lightCo
       rows: [],
       cells: {},
     };
-    for (let i: number = 0; i < rowCount; i += 1) {
+    for (let i: number = 0; i < +rowCount; i += 1) {
       const row = createRow(columnCount);
       matrix.rows[i] = row.row;
       matrix.cells = { ...matrix.cells, ...row.cells };
@@ -72,7 +72,7 @@ export const createTableAction = (rowCount: number, columnCount: string, lightCo
       newMatrix,
     },
   };
-}
+};
 
 export const addCellPlusOneAC = (idCell: string): {+type: string, +payload: string} => ({
   type: ADD_PLUS_ONE_IN_CELL,
@@ -88,14 +88,12 @@ function addRow(row): {+type: string, +payload: Row} {
 
 export const addRowToTableAC = () => (dispatch: any, getState: GetState) => {
   const state = getState();
-  const columnCount = state.state.valueColumn;
+  const columnCount = state.store.valueColumn;
   const row = createRow(columnCount);
   dispatch(addRow(row));
 };
 
-export const deleteRowTableAC = (idRow: string): {+type: string, +payload: string} => {
-  return {
-    type: DELETE_ROW_TO_TABLE,
-    payload: idRow,
-  };
-}
+export const deleteRowTableAC = (idRow: string): {+type: string, +payload: string} => ({
+  type: DELETE_ROW_TO_TABLE,
+  payload: idRow,
+});

@@ -27,12 +27,12 @@ type State = {
 };
 
 
-export default (state: State = initialState, action: Object): State => {
+export default (store: State = initialState, action: Object): State => {
   const { type, payload } = action;
   switch (type) {
     case CREATE_TABLE_BUTTON_CLICK:
       return {
-        ...state,
+        ...store,
         dataMatrix: payload.newMatrix,
         valueRow: payload.rowCount,
         valueColumn: payload.columnCount,
@@ -41,14 +41,14 @@ export default (state: State = initialState, action: Object): State => {
 
     case ADD_PLUS_ONE_IN_CELL:
       return {
-        ...state,
+        ...store,
         dataMatrix: {
-          ...state.dataMatrix,
+          ...store.dataMatrix,
           cells: {
-            ...state.dataMatrix.cells,
+            ...store.dataMatrix.cells,
             [payload]: {
-              ...state.dataMatrix.cells[payload],
-              value: state.dataMatrix.cells[payload].value + 1,
+              ...store.dataMatrix.cells[payload],
+              value: store.dataMatrix.cells[payload].value + 1,
             },
           },
         },
@@ -56,24 +56,24 @@ export default (state: State = initialState, action: Object): State => {
 
     case ADD_ROW_TO_TABLE:
       return {
-        ...state,
+        ...store,
         dataMatrix: {
-          ...state.dataMatrix,
-          cells: { ...state.dataMatrix.cells, ...payload.cells },
-          rows: state.dataMatrix.rows.concat(payload.row),
+          ...store.dataMatrix,
+          cells: { ...store.dataMatrix.cells, ...payload.cells },
+          rows: store.dataMatrix.rows.concat(payload.row),
         },
       };
 
     case DELETE_ROW_TO_TABLE:
       return {
-        ...state,
+        ...store,
         dataMatrix: {
-          ...state.dataMatrix,
-          rows: state.dataMatrix.rows.filter((number, element) => element !== payload),
+          ...store.dataMatrix,
+          rows: store.dataMatrix.rows.filter((number, element) => element !== payload),
         },
       };
 
     default:
-      return state;
+      return store;
   }
 };
