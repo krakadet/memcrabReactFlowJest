@@ -1,29 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4c48808-bb0d-495b-ae94-de5f588c3d91" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/__tests__/action/action.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__tests__/table/table.test.js" afterDir="false" />
+    <list default="true" id="c4c48808-bb0d-495b-ae94-de5f588c3d91" name="Default Changelist" comment="add Test">
       <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InputValueComponent/InputValuesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputValueComponent/InputValuesComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__tests__/InputValuesComponent.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/InputValuesComponent.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__tests__/action/action.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/action/action.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__tests__/table/avgRow.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/table/avgRow.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__tests__/table/buttonAdd.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/table/buttonAdd.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__tests__/table/buttonDelete.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/table/buttonDelete.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__tests__/table/cell.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/table/cell.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__tests__/table/table.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/table/table.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/action/action.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/action.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/createChangeTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/createChangeTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/createChangeTable.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/reducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/table/Cell.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/Cell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/table/RowComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/RowComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/InputValuesComponent.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/InputValuesComponent.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/action.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/avgRow.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/table/avgRow.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/buttonAdd.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/table/buttonAdd.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/buttonDelete.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/table/buttonDelete.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/cell.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/table/cell.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/cellSumRow.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/table/cellSumRow.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/rowComponent.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -136,17 +125,18 @@
     <session id="1676064157">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="babelrc" value="2" />
+          <entry key="babelrc" value="3" />
           <entry key="css" value="3" />
-          <entry key="eslintrc" value="4" />
+          <entry key="eslintrc" value="6" />
           <entry key="flowconfig" value="9" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="10" />
-          <entry key="js" value="307" />
-          <entry key="json" value="16" />
+          <entry key="js" value="319" />
+          <entry key="json" value="18" />
           <entry key="lock" value="1" />
           <entry key="snap" value="4" />
           <entry key="svg" value="2" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -154,19 +144,20 @@
           <entry key="CSS" value="3" />
           <entry key="HTML" value="10" />
           <entry key="Ini" value="7" />
-          <entry key="JSON" value="22" />
-          <entry key="JavaScript" value="307" />
+          <entry key="JSON" value="27" />
+          <entry key="JavaScript" value="319" />
           <entry key="Jest Snapshot" value="4" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="SVG" value="2" />
+          <entry key="XML" value="1" />
           <entry key="yarn.lock" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="23" />
+          <entry key="project.closed" value="24" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.2" value="2" />
@@ -176,55 +167,75 @@
           <entry key="project.open.time.7" value="6" />
           <entry key="project.open.time.8" value="6" />
           <entry key="project.open.time.9" value="7" />
-          <entry key="project.opened" value="34" />
+          <entry key="project.opened" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="ESLintLanguageService" value="32" />
-          <entry key="FlowJSServerService" value="33" />
+          <entry key="ESLintLanguageService" value="33" />
+          <entry key="FlowJSServerService" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="6" />
-          <entry key="eslintrc" value="4" />
+          <entry key="eslintrc" value="9" />
           <entry key="flowconfig" value="97" />
           <entry key="gitignore" value="11" />
           <entry key="html" value="19" />
-          <entry key="js" value="9808" />
+          <entry key="js" value="10393" />
           <entry key="json" value="44" />
           <entry key="lock" value="1" />
-          <entry key="txt" value="160" />
+          <entry key="txt" value="171" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="20" />
           <entry key="Ini" value="97" />
-          <entry key="JSON" value="48" />
-          <entry key="JavaScript" value="9807" />
-          <entry key="PLAIN_TEXT" value="177" />
+          <entry key="JSON" value="53" />
+          <entry key="JavaScript" value="10392" />
+          <entry key="PLAIN_TEXT" value="188" />
           <entry key="yarn.lock" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/action/action.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1824">
-              <caret line="88" selection-start-line="88" selection-end-line="93" selection-end-column="2" />
-              <folding>
-                <element signature="e#9#135#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/reducer/createChangeTable.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="187">
+                  <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/action/action.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="222">
+                  <caret line="99" column="6" selection-start-line="99" selection-start-column="6" selection-end-line="99" selection-end-column="6" />
+                  <folding>
+                    <element signature="e#9#135#0" expanded="true" />
+                    <element signature="n#!!block;n#getRandom#0" />
+                    <element signature="n#!!block;n#createRow#0" />
+                    <element signature="n#!!block;n#createTableAC#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -263,7 +274,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/types/MyTypes.js" />
         <option value="$PROJECT_DIR$/src/MyTypes.js" />
         <option value="$PROJECT_DIR$/src/table/cell.test.js" />
         <option value="$PROJECT_DIR$/src/app.test.js" />
@@ -291,7 +301,6 @@
         <option value="$PROJECT_DIR$/src/test/action.test.js" />
         <option value="$PROJECT_DIR$/src/test/app.test.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/InputValueComponent/InputValuesComponent.js" />
         <option value="$PROJECT_DIR$/src/test/table.test.js" />
         <option value="$PROJECT_DIR$/src/test/avgColumnMatrixTest.js" />
         <option value="$PROJECT_DIR$/src/test/avgColumnMatrix.test.js" />
@@ -300,10 +309,8 @@
         <option value="$PROJECT_DIR$/src/__tests__/function/avgColumnMatrix.test.js" />
         <option value="$PROJECT_DIR$/src/table/Table.js" />
         <option value="$PROJECT_DIR$/src/table/RowComponent.js" />
-        <option value="$PROJECT_DIR$/.eslintrc" />
         <option value="$PROJECT_DIR$/src/__tests__/table/cellSumRow.test.js" />
         <option value="$PROJECT_DIR$/src/__tests__/table/table.test.js" />
-        <option value="$PROJECT_DIR$/src/action/action.js" />
         <option value="$PROJECT_DIR$/src/__tests__/action/action.test.js" />
         <option value="$PROJECT_DIR$/src/__tests__/table/avgRow.test.js" />
         <option value="$PROJECT_DIR$/src/__tests__/table/buttonAdd.test.js" />
@@ -314,6 +321,10 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/__tests__/InputValuesComponent.test.js" />
         <option value="$PROJECT_DIR$/src/reducer/createChangeTable.js" />
+        <option value="$PROJECT_DIR$/src/InputValueComponent/InputValuesComponent.js" />
+        <option value="$PROJECT_DIR$/src/__tests__/reducer/createChangeTableTest.js" />
+        <option value="$PROJECT_DIR$/.eslintrc" />
+        <option value="$PROJECT_DIR$/src/action/action.js" />
       </list>
     </option>
   </component>
@@ -346,10 +357,9 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="1853" />
-    <option name="height" value="1055" />
+    <option name="x" value="-118" />
+    <option name="width" value="1843" />
+    <option name="height" value="789" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -380,22 +390,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Tests'; set:Tests; class com.intellij.psi.search.scope.TestsScope">
-          <expand>
-            <path>
-              <item name="my-app" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="my-app" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -406,18 +400,12 @@
             <path>
               <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
-              <item name="flow-coverage" type="462c0819:PsiDirectoryNode" />
+              <item name="coverage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="__tests__" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
@@ -430,6 +418,22 @@
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="reducer" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Tests'; set:Tests; class com.intellij.psi.search.scope.TestsScope">
+          <expand>
+            <path>
+              <item name="my-app" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="my-app" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -472,16 +476,16 @@
     <property name="settings.editor.splitter.proportion" value="0.23174293" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/component/InputValueComponent" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/__tests__" />
       <recent name="$PROJECT_DIR$/src/__tests__/inputValueConponent" />
       <recent name="$PROJECT_DIR$/src/__tests__/function" />
       <recent name="$PROJECT_DIR$/src/__tests__/action" />
       <recent name="$PROJECT_DIR$/src/__tests__/table" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/component/InputValueComponent" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -496,7 +500,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.flow-typed-install">
+  <component name="RunManager" selected="Jest.allReducer.ADD_PLUS_ONE_IN_CELL_TEST)">
     <configuration name="RowComponent __tests__ snapshot" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -521,16 +525,16 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="actionsTest.createRowTestArg100" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+    <configuration name="allReducer.ADD_PLUS_ONE_IN_CELL_TEST)" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/__tests__/action/action.test.js" />
+      <test-file value="$PROJECT_DIR$/src/__tests__/reducer/createChangeTableTest.js" />
       <test-names>
-        <test-name value="actionsTest" />
-        <test-name value="createRowTestArg100" />
+        <test-name value="allReducer" />
+        <test-name value="ADD_PLUS_ONE_IN_CELL_TEST)" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -559,17 +563,17 @@
     <list>
       <item itemvalue="Jest.actionsTest" />
       <item itemvalue="Jest.RowComponent __tests__ snapshot" />
-      <item itemvalue="Jest.actionsTest.createRowTestArg100" />
       <item itemvalue="Jest.renders correctly" />
       <item itemvalue="npm.flow-typed-install" />
+      <item itemvalue="Jest.allReducer.ADD_PLUS_ONE_IN_CELL_TEST)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.allReducer.ADD_PLUS_ONE_IN_CELL_TEST)" />
         <item itemvalue="npm.flow-typed-install" />
         <item itemvalue="Jest.RowComponent __tests__ snapshot" />
         <item itemvalue="Jest.renders correctly" />
         <item itemvalue="Jest.actionsTest" />
-        <item itemvalue="Jest.actionsTest.createRowTestArg100" />
       </list>
     </recent_temporary>
   </component>
@@ -664,7 +668,8 @@
       <workItem from="1535349068199" duration="27775000" />
       <workItem from="1535392403860" duration="60000" />
       <workItem from="1535397142049" duration="2115000" />
-      <workItem from="1535436313720" duration="18283000" />
+      <workItem from="1535436313720" duration="25781000" />
+      <workItem from="1535527147117" duration="4409000" />
     </task>
     <task id="LOCAL-00001" summary="add new commit">
       <created>1533561659605</created>
@@ -792,22 +797,17 @@
       <option name="project" value="LOCAL" />
       <updated>1535016233587</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add Test">
+      <created>1535458838207</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1535458838208</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="actionsTest_createRowTestArg100 - 2018.08.28 at 14h 36m 16s.xml">
-      <configuration name="actionsTest.createRowTestArg100" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="actionsTest_createRowTestArg100 - 2018.08.28 at 14h 39m 41s.xml">
-      <configuration name="actionsTest.createRowTestArg100" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="actionsTest_createRowTestArg100 - 2018.08.28 at 14h 41m 04s.xml">
-      <configuration name="actionsTest.createRowTestArg100" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="actionsTest_createRowTestArg100 - 2018.08.28 at 14h 41m 33s.xml">
-      <configuration name="actionsTest.createRowTestArg100" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
     <history-entry file="actionsTest_createRowTestArg0 - 2018.08.28 at 14h 41m 55s.xml">
       <configuration name="actionsTest.createRowTestArg0" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
@@ -826,9 +826,21 @@
     <history-entry file="RowComponent___tests___snapshot - 2018.08.28 at 14h 46m 54s.xml">
       <configuration name="RowComponent __tests__ snapshot" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
+    <history-entry file="allReducer_ADD_PLUS_ONE_IN_CELL_TEST) - 2018.08.29 at 10h 45m 30s.xml">
+      <configuration name="allReducer.ADD_PLUS_ONE_IN_CELL_TEST)" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="allReducer_ADD_PLUS_ONE_IN_CELL_TEST) - 2018.08.29 at 10h 46m 18s.xml">
+      <configuration name="allReducer.ADD_PLUS_ONE_IN_CELL_TEST)" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="allReducer_ADD_PLUS_ONE_IN_CELL_TEST) - 2018.08.29 at 10h 48m 56s.xml">
+      <configuration name="allReducer.ADD_PLUS_ONE_IN_CELL_TEST)" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="allReducer_ADD_PLUS_ONE_IN_CELL_TEST) - 2018.08.29 at 10h 49m 41s.xml">
+      <configuration name="allReducer.ADD_PLUS_ONE_IN_CELL_TEST)" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="517992000" />
+    <option name="totallyTimeSpent" value="529899000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -840,24 +852,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="0" y="-2" width="1920" height="1082" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18688525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18028466" />
       <window_info id="Structure" order="1" weight="0.24980111" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3261105" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" weight="0.36511377" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" weight="0.36421052" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39894736" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32997763" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4972156" weight="0.16331096" />
-      <window_info anchor="bottom" x="2471" y="331" width="178" height="370" id="Flow" order="8" sideWeight="0.4956245" visible="true" weight="0.22643554" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32947367" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.4972156" visible="true" weight="0.2263158" />
+      <window_info anchor="bottom" x="2471" y="331" width="178" height="370" id="Flow" order="8" sideWeight="0.4956245" weight="0.2263158" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50208336" side_tool="true" weight="0.340185" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" x="674" y="84" width="781" height="996" id="Terminal" order="11" sideWeight="0.49815497" weight="0.26868907" />
+      <window_info anchor="bottom" x="674" y="84" width="781" height="996" id="Terminal" order="11" sideWeight="0.49815497" weight="0.26105264" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -931,7 +943,29 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="now all works" />
     <MESSAGE value="change Cell and RowComponent" />
-    <option name="LAST_COMMIT_MESSAGE" value="change Cell and RowComponent" />
+    <MESSAGE value="add Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>vcs:///home/krak/Desktop/MemCrabReact/my-app/src/action/action.js</url>
+          <line>16</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>vcs:///home/krak/Desktop/MemCrabReact/my-app/src/action/action.js</url>
+          <line>1</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>vcs:///home/krak/Desktop/MemCrabReact/my-app/src/action/action.js</url>
+          <line>22</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
@@ -943,39 +977,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/table/table.test.js" />
-    <entry file="file://$PROJECT_DIR$/src/table/cell.test.js" />
-    <entry file="file://$PROJECT_DIR$/src/types/MyTypes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyTypes.js" />
-    <entry file="file://$PROJECT_DIR$/src/table/avgRow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/jestsetup.js" />
-    <entry file="file://$PROJECT_DIR$/src/table/CellSumRow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flow-typed/npm/react-redux_v5.x.x.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-39">
-          <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/createChangeTable.spec.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/jest-jasmine2/build/jasmine-async.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1608">
@@ -1056,9 +1057,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="e#9#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1073,16 +1071,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2496">
           <caret line="104" column="53" lean-forward="true" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
-          <folding>
-            <element signature="e#9#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.eslintrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="36" column="3" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1090,9 +1078,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
-          <folding>
-            <element signature="e#30#61#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1107,23 +1092,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="17" column="16272" selection-start-line="17" selection-start-column="16272" selection-end-line="17" selection-end-column="16272" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/__tests__/action/action.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="e#9#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InputValueComponent/InputValuesComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1143,15 +1111,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/__tests__/table/rowComponent.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1296">
-          <folding>
-            <element signature="e#9#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__tests__/table/rowComponent.test.js" />
     <entry file="file://$PROJECT_DIR$/flow-typed/npm/eslint-config-airbnb_vx.x.x.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
@@ -1160,48 +1120,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flow-typed/npm/babel-preset-es2015_vx.x.x.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/flow-typed/npm/react-test-renderer_v16.x.x.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/flow-typed/npm/redux-logger_vx.x.x.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/flow-typed/npm/redux-mock-store_v1.2.x.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/flow-typed/npm/redux-thunk_vx.x.x.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-938">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-938" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/__tests__/table/cellSumRow.test.js">
@@ -1223,27 +1155,105 @@
     <entry file="file://$PROJECT_DIR$/flow-coverage/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducer/createChangeTable.js">
+    <entry file="file://$PROJECT_DIR$/.babelrc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InputValueComponent/InputValuesComponent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+        <state relative-caret-position="456">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
+        <state relative-caret-position="744">
           <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coverage/coverage-final.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coverage/clover.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__tests__/action/action.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="4" selection-start-line="1" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__tests__/reducer/createChangeTableTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="67" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
+          <folding>
+            <element signature="e#9#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flow-typed/npm/prop-types_v15.x.x.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flow-coverage/assets/flow-highlight-source.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flow-coverage/assets/codemirror.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="1694" column="28" selection-start-line="1694" selection-start-column="28" selection-end-line="1694" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flow-typed/npm/enzyme_v3.x.x.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flow-coverage/assets/codemirror-javascript-mode.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/action/action.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1824">
-          <caret line="88" selection-start-line="88" selection-end-line="93" selection-end-column="2" />
+        <state relative-caret-position="222">
+          <caret line="99" column="6" selection-start-line="99" selection-start-column="6" selection-end-line="99" selection-end-column="6" />
           <folding>
             <element signature="e#9#135#0" expanded="true" />
+            <element signature="n#!!block;n#getRandom#0" />
+            <element signature="n#!!block;n#createRow#0" />
+            <element signature="n#!!block;n#createTableAC#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducer/createChangeTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
         </state>
       </provider>
     </entry>

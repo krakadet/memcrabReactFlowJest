@@ -41,28 +41,7 @@ export function createRow(columnCount: string): Row {
 }
 
 
-export const createTableAction = (rowCount: string, columnCount: string, lightCount: string): {
-  type: string,
-  payload: {
-    rowCount: string,
-    columnCount: string,
-    lightCount: string,
-    newMatrix: Matrix
-  }
-} => {
-  function createTable(): Matrix {
-    const matrix: Matrix = {
-      rows: [],
-      cells: {},
-    };
-    for (let i: number = 0; i < +rowCount; i += 1) {
-      const row = createRow(columnCount);
-      matrix.rows[i] = row.row;
-      matrix.cells = { ...matrix.cells, ...row.cells };
-    }
-    return matrix;
-  }
-  const newMatrix = createTable();
+function createTableAC(rowCount, columnCount, lightCount, newMatrix) {
   return {
     type: CREATE_TABLE_BUTTON_CLICK,
     payload: {
@@ -72,7 +51,56 @@ export const createTableAction = (rowCount: string, columnCount: string, lightCo
       newMatrix,
     },
   };
+}
+
+
+export const createTableAction = () => (dispatch: Function) => {
+  /* type: string,
+  payload: {
+    rowCount: string,
+    columnCount: string,
+    lightCount: string,
+    newMatrix: Matrix
+  }
+} => {
+*/
+  const status = (response) => {
+    if (response.status !== 200) {
+      return Promise.reject(new Error(response.statusText));
+    }
+    return Promise.resolve(response);
+  };
+  const json = response => response.json();
+
+  fetch('https://api.myjson.com/bins/yfvzc')
+    .then(status)
+    .then(json)
+    .then((data) => {
+      const columnCount = data[0].columnValue;
+      const rowCount = data[0].rowvalue;
+      const lightCount = data[0].lightValue;
+
+      function createTable(): Matrix {
+        const matrix: Matrix = {
+          rows: [],
+          cells: {},
+        };
+        for (let i: number = 0; i < +rowCount; i += 1) {
+          const row = createRow(columnCount);
+          matrix.rows[i] = row.row;
+          matrix.cells = { ...matrix.cells, ...row.cells };
+        }
+        return matrix;
+      }
+      const newMatrix = createTable();
+      dispatch(createTableAC(rowCount, columnCount, lightCount, newMatrix));
+    })
+
+    .catch((error) => {
+      console.log('error', error);
+    });
 };
+
 
 export const addCellPlusOneAC = (idCell: string): {+type: string, +payload: string} => ({
   type: ADD_PLUS_ONE_IN_CELL,

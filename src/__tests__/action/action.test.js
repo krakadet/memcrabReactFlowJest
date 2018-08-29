@@ -1,3 +1,4 @@
+// @flow
 import * as t from '../../constans';
 import {
   addCellPlusOneAC,
@@ -32,6 +33,5 @@ describe('actionsTest', () => {
     const expectedRow = createRow('100');
     expect(expectedRow.row.cells.length).toEqual(100);
     expect(Object.keys(expectedRow.cells).length).toEqual(100);
-
   });
 });

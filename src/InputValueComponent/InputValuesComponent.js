@@ -21,6 +21,7 @@ export class InputValuesComponent extends React.Component<Props, State> {
     lightValue: '0',
   };
 
+
   handlerClickBtn = () => {
     const { valueRow, valueColumn, lightValue } = this.state;
     const { createTableButtonClick } = this.props;
@@ -42,9 +43,9 @@ export class InputValuesComponent extends React.Component<Props, State> {
   render() {
     return (
       <form>
-        <input type="number" placeholder="Input column" onChange={this.handlerOnChangeColumn} />
-        <input type="number" placeholder="Input row" onChange={this.handlerOnChangeRow} />
-        <input type="number" placeholder="Input highlight" onChange={this.handlerOnCandlelight} />
+        {/* <input type="number" placeholder="Input column" onChange={this.handlerOnChangeColumn} /> */}
+        {/* <input type="number" placeholder="Input row" onChange={this.handlerOnChangeRow} /> */}
+        {/* <input type="number" placeholder="Input highlight" onChange={this.handlerOnCandlelight} /> */}
         <button type="button" className="btn" onClick={this.handlerClickBtn}>
           {' '}
           Create table
