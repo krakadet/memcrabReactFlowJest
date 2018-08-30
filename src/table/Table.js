@@ -7,17 +7,17 @@ import type { Matrix } from '../types/MyTypes';
 
 type State = {
   percentDisplayRow: string | null,
-  highlightedCells: Array<string>
+  highlightedCells: $ReadOnlyArray<string>
 }
 
-type Props= {
-  dataMatrix: Matrix,
-  lightValue: string
-}
+type Props= {|
+  +dataMatrix: Matrix,
+  +lightValue: string
+|}
 
 export class Table extends React.Component<Props, State> {
-  static avgColumnMatrix(dataMatrix: Matrix): Array<string> {
-    const resultArr: Array<string> = [];
+  static avgColumnMatrix(dataMatrix: Matrix): $ReadOnlyArray<string> {
+    let resultArr: $ReadOnlyArray<string> = [];
     if (dataMatrix.rows.length !== 0) {
       for (let column = 0; column < dataMatrix.rows[0].cells.length; column += 1) {
         let sums: number = 0;
@@ -25,7 +25,8 @@ export class Table extends React.Component<Props, State> {
           const cell = dataMatrix.rows[i].cells[column];
           sums += dataMatrix.cells[cell].value;
         }
-        resultArr.push((sums / dataMatrix.rows.length).toFixed(1));
+        const avgSum = [(sums / dataMatrix.rows.length).toFixed(1)];
+        resultArr = resultArr.concat(avgSum);
       }
     }
     return resultArr;
@@ -35,7 +36,7 @@ export class Table extends React.Component<Props, State> {
       idCell: string,
       cellsCount: string,
       dataMatrix: Matrix,
-    ): Array<string> => {
+    ): $ReadOnlyArray<string> => {
       if (idCell !== undefined) {
         const useArr = Object.keys(dataMatrix.cells);
         const valueOfCell = dataMatrix.cells[idCell].value;
@@ -91,12 +92,11 @@ export class Table extends React.Component<Props, State> {
         dataMatrix,
       } = this.props;
       return (
-        <table>
-          <tbody id="matrixTable">
+        <table className="table_area">
+          <tbody className="matrixTable">
             {dataMatrix.rows.map((arr, index) => (
               <RowComponent
                 key={arr.id}
-                arr={arr}
                 id={arr.id}
                 rowId={arr.id}
                 indexParentRow={index}

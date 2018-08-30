@@ -1,10 +1,9 @@
 // @flow
 
-
 export type Matrix = {
-  rows: Array<{
+  rows: $ReadOnlyArray<{
     id: string,
-    cells: Array<string>
+    cells: $ReadOnlyArray<string>
   }>,
   cells: {
     [key: string]: {
@@ -17,7 +16,7 @@ export type Matrix = {
 export type Row = {
   row: {
     id: string,
-    cells: Array<string>
+    cells: $ReadOnlyArray<string>
   },
   cells: {
     [key: string]: {

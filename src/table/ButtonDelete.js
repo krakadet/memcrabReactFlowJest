@@ -1,31 +1,27 @@
 // @flow
 import * as React from 'react';
-import { connect } from 'react-redux';
-import { deleteRowTableAC } from '../action/action';
 
-type Props = {
-  deleteRowTable: Function,
-  indexParentRow: number,
-};
 
-export class ButtonDelete extends React.Component<Props, {}> {
-  handlerClick = (event: Event & { currentTarget: HTMLButtonElement }) => {
+type Props = {|
+  +deleteRowTable: Function,
+|};
+
+export function ButtonDelete(props: Props) {
+  const handleClick = (event: SyntheticEvent<HTMLButtonElement>) => {
     event.preventDefault();
-    const { deleteRowTable, indexParentRow } = this.props;
-    deleteRowTable(indexParentRow);
+    const { deleteRowTable } = props;
+    deleteRowTable();
   };
 
-  render() {
-    return (
-      <td>
-        <button type="button" id="theButton" onClick={this.handlerClick}>
-          {' '}
+  return (
+    <td>
+      <button type="button" id="theButton" onClick={handleClick}>
+        {' '}
           Delete
-          {' '}
-        </button>
-      </td>
-    );
-  }
+        {' '}
+      </button>
+    </td>
+  );
 }
 
-export default connect(undefined, { deleteRowTable: deleteRowTableAC })(ButtonDelete);
+export default ButtonDelete;

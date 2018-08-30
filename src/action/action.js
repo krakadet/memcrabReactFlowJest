@@ -23,7 +23,7 @@ function getRandom(): number {
 export function createRow(columnCount: string): Row {
   const row: {
     id: string,
-    cells: Array<string>
+    cells: $ReadOnlyArray<string>
   } = { id: id(), cells: [] };
   const cells = {};
   for (let i = 0; i < +columnCount; i += 1) {
@@ -32,7 +32,8 @@ export function createRow(columnCount: string): Row {
       value: number,
     } = { id: id(), value: getRandom() };
     cells[cell.id] = cell;
-    row.cells[i] = cell.id;
+    const idCell = [cell.id];
+    row.cells = row.cells.concat(idCell);
   }
   return {
     row,
@@ -72,7 +73,7 @@ export const createTableAction = () => (dispatch: Function) => {
   };
   const json = response => response.json();
 
-  fetch('https://api.myjson.com/bins/yfvzc')
+  fetch('https://api.myjson.com/bins/p3g6c')
     .then(status)
     .then(json)
     .then((data) => {
@@ -87,7 +88,8 @@ export const createTableAction = () => (dispatch: Function) => {
         };
         for (let i: number = 0; i < +rowCount; i += 1) {
           const row = createRow(columnCount);
-          matrix.rows[i] = row.row;
+          const matrixRow = [row.row];
+          matrix.rows = matrix.rows.concat(matrixRow);
           matrix.cells = { ...matrix.cells, ...row.cells };
         }
         return matrix;

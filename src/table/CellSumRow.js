@@ -6,33 +6,29 @@ const getIdRow = (event: SyntheticEvent<HTMLTableCellElement>) => {
   return idRow;
 };
 
-type Props = {
-  percentDisplay: Function,
-  sumAllCellRow: number,
-  rowId: string
-}
+type Props = {|
+  +percentDisplay: Function,
+  +sumAllCellRow: number,
+  +rowId: string
+|}
 
-function CellSumRow(props: Props) {
+export function CellSumRow(props: Props) {
   const handleMouseEnter = (event: SyntheticEvent<HTMLTableCellElement>) => {
-    event.preventDefault();
     const row = getIdRow(event);
     props.percentDisplay(row);
   };
 
-
-  const handleMouseLeave = (event: SyntheticEvent<HTMLTableCellElement>) => {
-    event.preventDefault();
+  const handleMouseLeave = () => {
     props.percentDisplay(null);
   };
 
   const {
-
     sumAllCellRow,
     rowId,
   } = props;
   return (
     <td
-      id={`${rowId}`}
+      id={rowId}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

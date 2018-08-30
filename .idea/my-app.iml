@@ -8,5 +8,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="flow-typed" level="project" />
+    <orderEntry type="library" name="@types/flowjs" level="application" />
+    <orderEntry type="library" name="@types/react-color" level="application" />
   </component>
 </module>

@@ -6,12 +6,8 @@ import './style/App.css';
 
 const App = () => (
   <div>
-    <InputValuesComponent
-      className="input"
-    />
-    <Table
-      id="table_area"
-    />
+    <InputValuesComponent />
+    <Table />
   </div>
 );
 

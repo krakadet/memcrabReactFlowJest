@@ -1,26 +1,24 @@
 // @flow
 import * as React from 'react';
 import '../style/cell.css';
-import { connect } from 'react-redux';
-import { addCellPlusOneAC } from '../action/action';
 
-type Props = {
-  addCellPlusOne: Function,
-  lightValue: string,
-  updateDataLightArrValue: (?string) => void,
-  id: string,
-  value: number,
-  highlighted: boolean,
-  isStyle: boolean,
-};
+type Props = {|
+  +addCellPlusOne: Function,
+  +lightValue: string,
+  +updateDataLightArrValue: (?string) => void,
+  +id: string,
+  +value: number,
+  +highlighted: boolean,
+  +isStyle: boolean,
+|};
 
 
 export class Cell extends React.PureComponent<Props, {}> {
-    handleClick = (event: SyntheticEvent<HTMLButtonElement>) => {
-      event.preventDefault();
-      const { addCellPlusOne } = this.props;
-      addCellPlusOne(event.currentTarget.id);
-    };
+     handleClick = (event: SyntheticEvent<HTMLButtonElement>) => {
+       console.log('click');
+       const { addCellPlusOne } = this.props;
+       addCellPlusOne(event.currentTarget.id);
+     };
 
     lightingNumberNative = (event: SyntheticEvent<HTMLTableCellElement>) => {
       event.preventDefault();
@@ -71,6 +69,4 @@ export class Cell extends React.PureComponent<Props, {}> {
     }
 }
 
-export default connect((state => ({
-  lightValue: state.store.lightValue,
-})), { addCellPlusOne: addCellPlusOneAC })(Cell);
+export default Cell;

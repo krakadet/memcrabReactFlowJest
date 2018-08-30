@@ -1,9 +1,9 @@
 // @flow
 import * as React from 'react';
 
-type Props = {
-  avgArr: Array<string>
-};
+type Props = {|
+  +avgArr: $ReadOnlyArray<string>
+|};
 
 function AvgRow(props: Props) {
   const { avgArr } = props;

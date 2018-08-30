@@ -3,9 +3,9 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { createTableAction } from '../action/action';
 
-type Props = {
-  createTableButtonClick: Function
-};
+type Props = {|
+  +createTableButtonClick: Function
+|};
 
 type State = {
   valueRow: string,
@@ -42,7 +42,7 @@ export class InputValuesComponent extends React.Component<Props, State> {
 
   render() {
     return (
-      <form>
+      <form className="input">
         {/* <input type="number" placeholder="Input column" onChange={this.handlerOnChangeColumn} /> */}
         {/* <input type="number" placeholder="Input row" onChange={this.handlerOnChangeRow} /> */}
         {/* <input type="number" placeholder="Input highlight" onChange={this.handlerOnCandlelight} /> */}

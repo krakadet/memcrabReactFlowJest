@@ -1,31 +1,26 @@
 // @flow
 import * as React from 'react';
-import { connect } from 'react-redux';
 
-import { addRowToTableAC } from '../action/action';
+type Props = {|
+  +addRowToTable: Function,
+|}
 
-type Props = {
-  addRowToTable: Function,
-}
+export function ButtonAdd(props: Props) {
+  const handleClick = (event: SyntheticEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    const { addRowToTable } = props;
+    addRowToTable();
+  };
 
-export class ButtonAdd extends React.Component<Props, {}> {
-    handlerClick = (event: Event & { currentTarget: HTMLButtonElement }) => {
-      event.preventDefault();
-      const { addRowToTable } = this.props;
-      addRowToTable();
-    };
-
-    render() {
-      return (
-        <td>
-          <button type="button" id="theButton" onClick={this.handlerClick}>
-            {' '}
+  return (
+    <td>
+      <button type="button" id="theButton" onClick={handleClick}>
+        {' '}
                     Add
-            {' '}
-          </button>
-        </td>
-      );
-    }
+        {' '}
+      </button>
+    </td>
+  );
 }
 
-export default connect(undefined, { addRowToTable: addRowToTableAC })(ButtonAdd);
+export default ButtonAdd;
