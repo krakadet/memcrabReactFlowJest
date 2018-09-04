@@ -4,6 +4,7 @@ import {
   ADD_PLUS_ONE_IN_CELL,
   DELETE_ROW_TO_TABLE,
   ADD_ROW_TO_TABLE,
+  UPDATE_VALUES_FROM_SERVER,
 } from '../constans';
 
 import type {
@@ -55,7 +56,7 @@ function createTableAC(rowCount, columnCount, lightCount, newMatrix) {
 }
 
 
-export const createTableAction = () => (dispatch: Function) => {
+export const createTableAction = (valueRow: string, valueColumn: string, lightValue: string) => (dispatch: Function) => {
   /* type: string,
   payload: {
     rowCount: string,
@@ -65,42 +66,21 @@ export const createTableAction = () => (dispatch: Function) => {
   }
 } => {
 */
-  const status = (response) => {
-    if (response.status !== 200) {
-      return Promise.reject(new Error(response.statusText));
+  function createTable(): Matrix {
+    const matrix: Matrix = {
+      rows: [],
+      cells: {},
+    };
+    for (let i: number = 0; i < +valueRow; i += 1) {
+      const row = createRow(valueColumn);
+      const matrixRow = [row.row];
+      matrix.rows = matrix.rows.concat(matrixRow);
+      matrix.cells = { ...matrix.cells, ...row.cells };
     }
-    return Promise.resolve(response);
-  };
-  const json = response => response.json();
-
-  fetch('https://api.myjson.com/bins/p3g6c')
-    .then(status)
-    .then(json)
-    .then((data) => {
-      const columnCount = data[0].columnValue;
-      const rowCount = data[0].rowvalue;
-      const lightCount = data[0].lightValue;
-
-      function createTable(): Matrix {
-        const matrix: Matrix = {
-          rows: [],
-          cells: {},
-        };
-        for (let i: number = 0; i < +rowCount; i += 1) {
-          const row = createRow(columnCount);
-          const matrixRow = [row.row];
-          matrix.rows = matrix.rows.concat(matrixRow);
-          matrix.cells = { ...matrix.cells, ...row.cells };
-        }
-        return matrix;
-      }
-      const newMatrix = createTable();
-      dispatch(createTableAC(rowCount, columnCount, lightCount, newMatrix));
-    })
-
-    .catch((error) => {
-      console.log('error', error);
-    });
+    return matrix;
+  }
+  const newMatrix = createTable();
+  dispatch(createTableAC(valueRow, valueColumn, lightValue, newMatrix));
 };
 
 
@@ -126,4 +106,13 @@ export const addRowToTableAC = () => (dispatch: any, getState: GetState) => {
 export const deleteRowTableAC = (idRow: string): {+type: string, +payload: string} => ({
   type: DELETE_ROW_TO_TABLE,
   payload: idRow,
+});
+
+export const updateInputsValue = (columnCount: number, rowCount: number, lightCount: number): {+type: string, payload: Object} => ({
+  type: UPDATE_VALUES_FROM_SERVER,
+  payload: {
+    columnCount,
+    rowCount,
+    lightCount,
+  },
 });

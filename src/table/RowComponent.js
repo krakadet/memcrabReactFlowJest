@@ -27,10 +27,13 @@ type Props = {|
   +addCellPlusOneAC: Function,
   +addRowToTableAC: Function,
   +deleteRowTableAC: Function,
+  +cells: Object,
 |};
 
 export class RowComponent extends React.Component<Props> {
-  sumRow = (rowIndex: number, data: Matrix): number => data.rows[rowIndex].cells.reduce((accumulator, currentValue) => accumulator + data.cells[currentValue].value, 0);
+  sumRow = (rowIndex: number,
+    data: Matrix,
+    cellsA: {}): number => data.rows[rowIndex].cells.reduce((accumulator, currentValue) => accumulator + cellsA[currentValue].value, 0);
 
   percentValue = (value: number, sumRow: number): number => Math.round(value * 100 / sumRow);
 
@@ -61,18 +64,19 @@ export class RowComponent extends React.Component<Props> {
       percentDisplay,
       rowId,
       lightValue,
+      cells,
     } = this.props;
     return (
       <tr id={id}>
         {cellsDataValue.map(val => (
           <Cell
-            key={dataMatrix.cells[val].id}
+            key={cells[val].id}
             highlighted={highlightedCells.includes(val)}
             updateDataLightArrValue={updateDataLightArrValue}
             value={percentDisplayRow === id
-              ? this.percentValue(dataMatrix.cells[val].value, this.sumRow(indexParentRow, dataMatrix))
-              : dataMatrix.cells[val].value}
-            id={dataMatrix.cells[val].id}
+              ? this.percentValue(cells[val].value, this.sumRow(indexParentRow, dataMatrix, cells))
+              : cells[val].value}
+            id={cells[val].id}
             isStyle={percentDisplayRow === id}
             addCellPlusOne={this.addCellPlusOne}
             lightValue={lightValue}
@@ -83,7 +87,7 @@ export class RowComponent extends React.Component<Props> {
           <CellSumRow
             key={id}
             percentDisplay={percentDisplay}
-            sumAllCellRow={this.sumRow(indexParentRow, dataMatrix)}
+            sumAllCellRow={this.sumRow(indexParentRow, dataMatrix, cells)}
             rowId={rowId}
           />
         }
@@ -103,5 +107,6 @@ export class RowComponent extends React.Component<Props> {
 
 export default connect((state => ({
   dataMatrix: state.store.dataMatrix,
+  cells: state.store.cells,
   lightValue: state.store.lightValue,
 })), { addCellPlusOneAC, addRowToTableAC, deleteRowTableAC })(RowComponent);

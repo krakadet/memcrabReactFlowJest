@@ -12,37 +12,38 @@ type State = {
 
 type Props= {|
   +dataMatrix: Matrix,
-  +lightValue: string
+  +lightValue: string,
+  +cells: {},
 |}
 
 export class Table extends React.Component<Props, State> {
-  static avgColumnMatrix(dataMatrix: Matrix): $ReadOnlyArray<string> {
-    let resultArr: $ReadOnlyArray<string> = [];
-    if (dataMatrix.rows.length !== 0) {
-      for (let column = 0; column < dataMatrix.rows[0].cells.length; column += 1) {
-        let sums: number = 0;
-        for (let i = 0; i < dataMatrix.rows.length; i += 1) {
-          const cell = dataMatrix.rows[i].cells[column];
-          sums += dataMatrix.cells[cell].value;
-        }
-        const avgSum = [(sums / dataMatrix.rows.length).toFixed(1)];
-        resultArr = resultArr.concat(avgSum);
-      }
-    }
-    return resultArr;
-  }
+ static avgColumnMatrix = (dataMatrix: Matrix, cells: {}): $ReadOnlyArray<string> => {
+   let resultArr: $ReadOnlyArray<string> = [];
+   if (dataMatrix.rows.length !== 0) {
+     for (let column = 0; column < dataMatrix.rows[0].cells.length; column += 1) {
+       let sums: number = 0;
+       for (let i = 0; i < dataMatrix.rows.length; i += 1) {
+         const cell = dataMatrix.rows[i].cells[column];
+         sums += cells[cell].value;
+       }
+       const avgSum = [(sums / dataMatrix.rows.length).toFixed(1)];
+       resultArr = resultArr.concat(avgSum);
+     }
+   }
+   return resultArr;
+ };
 
     static newLightingCell = (
       idCell: string,
       cellsCount: string,
-      dataMatrix: Matrix,
+      cells: {},
     ): $ReadOnlyArray<string> => {
       if (idCell !== undefined) {
-        const useArr = Object.keys(dataMatrix.cells);
-        const valueOfCell = dataMatrix.cells[idCell].value;
+        const useArr = Object.keys(cells);
+        const valueOfCell = cells[idCell].value;
         const compare = (first: string, second: string): 1 | 0 | -1 => {
-          const firstValue = dataMatrix.cells[first].value;
-          const secondValue = dataMatrix.cells[second].value;
+          const firstValue = cells[first].value;
+          const secondValue = cells[second].value;
           const absFirst = Math.abs(firstValue - valueOfCell);
           const absSecond = Math.abs(secondValue - valueOfCell);
           if (absFirst < absSecond) return -1;
@@ -63,8 +64,8 @@ export class Table extends React.Component<Props, State> {
 
 
     updateDataLightArrValue = (idCell: string) => {
-      const { lightValue, dataMatrix } = this.props;
-      const highlightedArr = Table.newLightingCell(idCell, lightValue, dataMatrix);
+      const { lightValue, cells } = this.props;
+      const highlightedArr = Table.newLightingCell(idCell, lightValue, cells);
       this.setState({
         highlightedCells: highlightedArr,
       });
@@ -82,7 +83,6 @@ export class Table extends React.Component<Props, State> {
       }
     };
 
-
     render() {
       const {
         percentDisplayRow,
@@ -90,6 +90,7 @@ export class Table extends React.Component<Props, State> {
       } = this.state;
       const {
         dataMatrix,
+        cells,
       } = this.props;
       return (
         <table className="table_area">
@@ -108,7 +109,7 @@ export class Table extends React.Component<Props, State> {
               />
             ))}
             <AvgRow
-              avgArr={Table.avgColumnMatrix(dataMatrix)}
+              avgArr={Table.avgColumnMatrix(dataMatrix, cells)}
             />
           </tbody>
         </table>
@@ -118,5 +119,6 @@ export class Table extends React.Component<Props, State> {
 
 export default connect((state => ({
   dataMatrix: state.store.dataMatrix,
+  cells: state.store.cells,
   lightValue: state.store.lightValue,
 })))(Table);
