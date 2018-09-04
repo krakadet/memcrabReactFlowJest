@@ -6,7 +6,7 @@ import { createTableAction, updateInputsValue } from '../action/action';
 import 'react-pure-modal/dist/react-pure-modal.min.css';
 import Time from './Time';
 import { formActions, mergeActionsToProps } from 'redux-pure-form';
-
+import  generator  from './generatorForTable';
 
 type Props = {|
   +createTableAction: Function,
@@ -51,11 +51,11 @@ export class InputValuesComponent extends React.Component<Props, State> {
         const columnCount = data[0].columnValue;
         const rowCount = data[0].rowvalue;
         const lightCount = data[0].lightValue;
-        this.setState({
-          valueRow: rowCount,
-          valueColumn: columnCount,
-          lightValue: lightCount,
-        });
+        // this.setState({
+        //   valueRow: rowCount,
+        //   valueColumn: columnCount,
+        //   lightValue: lightCount,
+        // });
         const { updateInputsValue } = this.props;
         updateInputsValue(columnCount, rowCount, lightCount);
       })
@@ -67,23 +67,34 @@ export class InputValuesComponent extends React.Component<Props, State> {
 
   handlerClickBtn = () => {
     this.refs.modal.open();
-    const { rowValue, columnValue, lightValue } = this.props.profile;
+    let values = [];
+    const myGen = generator();
+    for (const value of myGen) {
+      values = values.concat([value]);
+    }
+    // const { rowValue, columnValue, lightValue } = this.props.profile;
+    const [rowValue, columnValue, lightValue] = values;
+    this.setState({
+      valueRow: rowValue,
+      valueColumn: columnValue,
+      lightValue: lightValue,
+    });
     console.log('lightValue====>>>>', lightValue);
     const { createTableAction } = this.props;
     createTableAction(rowValue, columnValue, lightValue);
   };
-
-  handlerOnChangeColumn = (event: SyntheticEvent<HTMLInputElement>) => {
-    this.setState({ valueColumn: event.currentTarget.value });
-  };
-
-  handlerOnChangeRow = (event: SyntheticEvent<HTMLInputElement>) => {
-    this.setState({ valueRow: event.currentTarget.value });
-  };
-
-  handlerOnCandlelight = (event: SyntheticEvent<HTMLInputElement>) => {
-    this.setState({ lightValue: event.currentTarget.value });
-  };
+  //
+  // handlerOnChangeColumn = (event: SyntheticEvent<HTMLInputElement>) => {
+  //   this.setState({ valueColumn: event.currentTarget.value });
+  // };
+  //
+  // handlerOnChangeRow = (event: SyntheticEvent<HTMLInputElement>) => {
+  //   this.setState({ valueRow: event.currentTarget.value });
+  // };
+  //
+  // handlerOnCandlelight = (event: SyntheticEvent<HTMLInputElement>) => {
+  //   this.setState({ lightValue: event.currentTarget.value });
+  // };
 
   handle(e: SyntheticEvent<HTMLInputElement>, formName: string) {
     this.props.fieldAttrs.onChange({
@@ -149,7 +160,10 @@ export class InputValuesComponent extends React.Component<Props, State> {
           // isOpen
           ref="modal"
         >
-          <p>Your content</p>
+          <p>generated table with next value</p>
+          <p>row value = {this.state.valueRow} </p>
+          <p>column value = {this.state.valueColumn} </p>
+          <p>light value = {this.state.lightValue} </p>
         </PureModal>
       </div>
     );
