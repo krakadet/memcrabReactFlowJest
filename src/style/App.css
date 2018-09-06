@@ -29,7 +29,7 @@
 body {
   background: dimgrey;
 }
-#matrixTable, form {
+.matrixTable, form {
   font-family: Georgia, serif;
   border: 6px solid #24943A;
   background-color: #D4EED1;
@@ -37,15 +37,15 @@ body {
   margin: 10px auto;
   text-align: center;
 }
-#matrixTable td, #matrixTable th {
+.matrixTable td, #matrixTable th {
   border: 1px solid #24943A;
   padding: 3px 2px;
   cursor:pointer;
 }
-#matrixTable tbody td {
+.matrixTable tbody td {
   font-size: 13px;
 }
-#matrixTable tfoot .links a {
+.matrixTable tfoot .links a {
   display: inline-block;
   background: #FFFFFF;
   color: #24943A;
@@ -69,7 +69,7 @@ input[type='number'] {
   padding: 2px 5px;
   border: 1px solid #24943A;
 }
-#theButton {
+.theButton {
   height: 24px;
   text-align: center;
   font-size: large;

@@ -6,7 +6,7 @@ import { createTableAction, updateInputsValue } from '../action/action';
 import 'react-pure-modal/dist/react-pure-modal.min.css';
 import Time from './Time';
 import { formActions, mergeActionsToProps } from 'redux-pure-form';
-import  generator  from './generatorForTable';
+import generator from './generatorForTable';
 
 type Props = {|
   +createTableAction: Function,
@@ -67,17 +67,17 @@ export class InputValuesComponent extends React.Component<Props, State> {
 
   handlerClickBtn = () => {
     this.refs.modal.open();
-    let values = [];
+    let values: Array<string> = [];
     const myGen = generator();
     for (const value of myGen) {
-      values = values.concat([value]);
+      values = values.concat([`${value}`]);
     }
     // const { rowValue, columnValue, lightValue } = this.props.profile;
     const [rowValue, columnValue, lightValue] = values;
     this.setState({
       valueRow: rowValue,
       valueColumn: columnValue,
-      lightValue: lightValue,
+      lightValue,
     });
     console.log('lightValue====>>>>', lightValue);
     const { createTableAction } = this.props;
@@ -161,9 +161,24 @@ export class InputValuesComponent extends React.Component<Props, State> {
           ref="modal"
         >
           <p>generated table with next value</p>
-          <p>row value = {this.state.valueRow} </p>
-          <p>column value = {this.state.valueColumn} </p>
-          <p>light value = {this.state.lightValue} </p>
+          <p>
+row value =
+            {this.state.valueRow}
+            {' '}
+
+          </p>
+          <p>
+column value =
+            {this.state.valueColumn}
+            {' '}
+
+          </p>
+          <p>
+light value =
+            {this.state.lightValue}
+            {' '}
+
+          </p>
         </PureModal>
       </div>
     );

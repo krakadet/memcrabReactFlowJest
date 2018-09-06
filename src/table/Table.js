@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import RowComponent from './RowComponent';
 import AvgRow from './avgRow';
 import type { Matrix } from '../types/MyTypes';
+import style from '../style/App.css';
 
 type State = {
   percentDisplayRow: string | null,
@@ -93,7 +94,7 @@ export class Table extends React.Component<Props, State> {
         cells,
       } = this.props;
       return (
-        <table className="table_area">
+        <table className={style.matrixTable}>
           <tbody className="matrixTable">
             {dataMatrix.rows.map((arr, index) => (
               <RowComponent

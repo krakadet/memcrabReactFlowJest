@@ -7,7 +7,7 @@ function getRandom(): number {
 }
 
 
-export default function* generatorInputValue() {
+export default function* generatorInputValue(): Generator<number, void, string> {
   yield getRandom();
   yield getRandom();
   yield getRandom();
